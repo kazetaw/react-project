@@ -1,6 +1,6 @@
 import Button from "@mui/material/Button/Button";
 import { useNavigate } from "react-router-dom";
-import Type from "./Type";
+import Type from "./CheckList";
 function Home() {
   const navigate = useNavigate();
   return (

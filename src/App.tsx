@@ -3,6 +3,7 @@ import "./App.css";
 import Todo from "./page/Todo";
 import Home from "./page/Home";
 import Nav from "./components/Nav";
+import CheckList from "./page/CheckList";
 
 const MainLayout = () => (
   <>
@@ -26,6 +27,10 @@ const Router = createBrowserRouter([
       {
         path: "todo",
         element: <Todo />,
+      },
+      {
+        path: "word",
+        element: <CheckList />,
       },
       {
         path: "*",

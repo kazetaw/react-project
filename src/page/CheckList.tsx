@@ -1,11 +1,9 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
-import LockIcon from "@mui/icons-material/Lock";
-import LockOpenIcon from "@mui/icons-material/LockOpen";
 import Words from "./words.json";
+import WordList from "../components/WordList";
+
 interface Word {
   word: string;
   lang: "th" | "en";
@@ -88,85 +86,52 @@ const CheckList: React.FC = () => {
     return () => clearInterval(interval);
   }, [lockedWords]);
 
-  const renderWord = (word: Word, timeLeft?: number) => (
-    <Paper
-      key={word.word}
-      onClick={() => handleWordClick(word)}
-      sx={{
-        cursor: "pointer",
-        padding: 1,
-        margin: 1,
-        textAlign: "center",
-        position: "relative",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#f5f5f5",
-        borderRadius: 2,
-        fontSize: "0.875rem",
-      }}
-      elevation={2}
-    >
-      {word.word}
-      {timeLeft !== undefined && (
-        <Typography
-          variant="caption"
-          sx={{ position: "absolute", top: 5, right: 5, zIndex: 1 }}
-        >
-          {timeLeft}
-        </Typography>
-      )}
-      <IconButton
-        size="small"
-        sx={{ position: "absolute", top: 5, right: 5, zIndex: 1 }}
-        onClick={(e) => {
-          e.stopPropagation();
-          toggleLock(word);
+  return (
+    <Box sx={{ p: 2 }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          mb: 2,
         }}
       >
-        {lockedWords.has(word.word) ? (
-          <LockIcon fontSize="small" />
-        ) : (
-          <LockOpenIcon fontSize="small" />
-        )}
-      </IconButton>
-    </Paper>
-  );
-
-  return (
-    <>
-      {" "}
-      <Box sx={{ p: 2 }}>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            mb: 2,
-          }}
-        >
-          <Box sx={{ flex: 1, mx: 0.5 }}>
-            <Typography sx={{ textAlign: "center" }}>คำศัพท์</Typography>
-          </Box>
-          <Box sx={{ flex: 1, mx: 0.5 }}>
-            <Typography sx={{ textAlign: "center" }}>ภาษาไทย</Typography>
-          </Box>
-          <Box sx={{ flex: 1, mx: 0.5 }}>
-            <Typography sx={{ textAlign: "center" }}>ภาษาอังกฤษ</Typography>
-          </Box>
+        <Box sx={{ flex: 1, mx: 0.5 }}>
+          <Typography sx={{ textAlign: "center" }}>คำศัพท์</Typography>
         </Box>
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Box sx={{ flex: 1, mx: 0.5 }}>
-            {vocabulary.map((word) => renderWord(word))}
-          </Box>
-          <Box sx={{ flex: 1, mx: 0.5 }}>
-            {thaiWords.map((word) => renderWord(word, timers[word.word]))}
-          </Box>
-          <Box sx={{ flex: 1, mx: 0.5 }}>
-            {englishWords.map((word) => renderWord(word, timers[word.word]))}
-          </Box>
+        <Box sx={{ flex: 1, mx: 0.5 }}>
+          <Typography sx={{ textAlign: "center" }}>ภาษาไทย</Typography>
+        </Box>
+        <Box sx={{ flex: 1, mx: 0.5 }}>
+          <Typography sx={{ textAlign: "center" }}>ภาษาอังกฤษ</Typography>
         </Box>
       </Box>
-    </>
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <WordList
+          title=""
+          words={vocabulary}
+          timers={timers}
+          lockedWords={lockedWords}
+          onWordClick={handleWordClick}
+          onToggleLock={toggleLock}
+        />
+        <WordList
+          title=""
+          words={thaiWords}
+          timers={timers}
+          lockedWords={lockedWords}
+          onWordClick={handleWordClick}
+          onToggleLock={toggleLock}
+        />
+        <WordList
+          title=""
+          words={englishWords}
+          timers={timers}
+          lockedWords={lockedWords}
+          onWordClick={handleWordClick}
+          onToggleLock={toggleLock}
+        />
+      </Box>
+    </Box>
   );
 };
 
