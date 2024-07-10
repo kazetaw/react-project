@@ -25,40 +25,43 @@ const TodoList: React.FC = () => {
   };
 
   return (
-    <Container>
-      <Typography variant="h4" component="h1" gutterBottom>
+    <>
+      <Container>
+        {/* <Typography variant="h4" component="h1" gutterBottom>
         Todo List
-      </Typography>
-      <Box display="flex" alignItems="center" marginBottom={2}>
-        <TextField
-          fullWidth
-          variant="outlined"
-          margin="normal"
-          label="New Todo"
-          value={newTodo}
-          onChange={(e) => setNewTodo(e.target.value)}
-        />
-        <Button
-          variant="contained"
-          color="success"
-          onClick={addTodo}
-          sx={{ marginLeft: 2, height: "56px" }} // Ensure the height matches the TextField
-        >
-          Add
-        </Button>
-      </Box>
-      <Box>
-        {todos.map((todo, index) => (
-          <TodoItem
-            key={index}
-            index={index}
-            todo={todo}
-            removeTodo={removeTodo}
-            editTodo={editTodo}
+      </Typography> */}
+        <h1>To do list</h1>
+        <Box display="flex" alignItems="center" marginBottom={2}>
+          <TextField
+            fullWidth
+            variant="outlined"
+            margin="normal"
+            label="New Todo"
+            value={newTodo}
+            onChange={(e) => setNewTodo(e.target.value)}
           />
-        ))}
-      </Box>
-    </Container>
+          <Button
+            variant="contained"
+            color="success"
+            onClick={addTodo}
+            sx={{ marginLeft: 1.5, height: "48px", marginTop: 0.8 }} // Ensure the height matches the TextField
+          >
+            Add
+          </Button>
+        </Box>
+        <Box>
+          {todos.map((todo, index) => (
+            <TodoItem
+              key={index}
+              index={index}
+              todo={todo}
+              removeTodo={removeTodo}
+              editTodo={editTodo}
+            />
+          ))}
+        </Box>
+      </Container>
+    </>
   );
 };
 

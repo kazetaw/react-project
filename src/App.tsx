@@ -4,7 +4,9 @@ import Todo from "./page/Todo";
 import Home from "./page/Home";
 import Nav from "./components/Nav";
 import CheckList from "./page/CheckList";
-
+import { Landingpage } from "./page/Landingpage";
+import "./index.css";
+import Card_ws from "./page/Card_ws";
 const MainLayout = () => (
   <>
     <Nav />
@@ -32,6 +34,15 @@ const Router = createBrowserRouter([
         path: "word",
         element: <CheckList />,
       },
+      {
+        path: "landingpage",
+        element: <Landingpage />,
+      },
+      {
+        path: "card",
+        element: <Card_ws />,
+      },
+
       {
         path: "*",
         element: <Home />,

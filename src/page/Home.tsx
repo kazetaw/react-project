@@ -1,15 +1,34 @@
-import Button from "@mui/material/Button/Button";
+import React from "react";
+import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
-import Type from "./CheckList";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+
 function Home() {
   const navigate = useNavigate();
+
   return (
-    <div>
-      {/* <Link to={"/todo"}>ddd</Link> */}
-      {/* <h1>Home</h1> */}
-      <Type />
-      <Button onClick={() => navigate("a")}></Button>
-    </div>
+    <Container>
+      <Box
+        display="flex"
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+        minHeight="100vh"
+      >
+        <Typography variant="h2" gutterBottom>
+          HOME
+        </Typography>
+        {/* <Button
+          variant="contained"
+          color="primary"
+          onClick={() => navigate("/todo")}
+        >
+          Go to Todo List
+        </Button> */}
+      </Box>
+    </Container>
   );
 }
 

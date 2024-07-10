@@ -44,6 +44,22 @@ function Nav() {
       >
         Word
       </Button>
+      <Button
+        component={Link}
+        to="/landingpage"
+        variant="outlined"
+        sx={getButtonStyle("/landingpage")}
+      >
+        Landing Page
+      </Button>
+      <Button
+        component={Link}
+        to="/card"
+        variant="outlined"
+        sx={getButtonStyle("/card")}
+      >
+        Card
+      </Button>
     </Box>
   );
 }
