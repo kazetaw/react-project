@@ -1,4 +1,4 @@
-import { clsx } from "clsx";
+// import { clsx } from "clsx";
 import "./styles/Card.css";
 function Card() {
   return (
@@ -267,8 +267,10 @@ function Card() {
                       </div>
                     </div>
                   </div>
+                  <div className="absolute w-[80px] h-[120px] top-0 right-0 left-1/2 translate-x-12 bg-gradient-to-t from-gray-950 to-blue-400"></div>
+                  <div className="absolute w-[80px] h-[120px] bottom-0 right-0 left-1/2 translate-x-12 bg-gradient-to-t from-blue-400 to-gray-950"></div>
 
-                  <div className="relative ...">
+                  <div className="relative justify-center items-center">
                     <div
                       style={{
                         width: 158,
@@ -294,8 +296,9 @@ function Card() {
                         height: 150,
                         overflow: "hidden",
                         borderRadius: "50%",
+                        display: "flex",
                       }}
-                      className="absolute bottom-0 top-1 left-1 lex justify-center items-center"
+                      className="absolute bottom-0 top-1 left-1 justify-center items-center"
                     >
                       <img
                         style={{

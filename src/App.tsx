@@ -7,6 +7,7 @@ import CheckList from "./page/CheckList";
 import { Landingpage } from "./page/Landingpage";
 import "./index.css";
 import Card_ws from "./page/Card_ws";
+import Ex_antd from "./page/Ex_antd";
 const MainLayout = () => (
   <>
     <Nav />
@@ -41,6 +42,10 @@ const Router = createBrowserRouter([
       {
         path: "card",
         element: <Card_ws />,
+      },
+      {
+        path: "antd",
+        element: <Ex_antd />,
       },
 
       {
