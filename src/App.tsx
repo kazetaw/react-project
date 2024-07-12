@@ -8,6 +8,8 @@ import { Landingpage } from "./page/Landingpage";
 import "./index.css";
 import Card_ws from "./page/Card_ws";
 import Ex_antd from "./page/Ex_antd";
+// import { Card } from "antd";
+import ShoppingCart from "./page/ShoppingCart";
 const MainLayout = () => (
   <>
     <Nav />
@@ -46,6 +48,10 @@ const Router = createBrowserRouter([
       {
         path: "antd",
         element: <Ex_antd />,
+      },
+      {
+        path: "shopping_card",
+        element: <ShoppingCart />,
       },
 
       {
