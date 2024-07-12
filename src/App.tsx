@@ -50,7 +50,7 @@ const Router = createBrowserRouter([
         element: <Ex_antd />,
       },
       {
-        path: "shopping_card",
+        path: "shopping_cart",
         element: <ShoppingCart />,
       },
 

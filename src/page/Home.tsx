@@ -20,13 +20,13 @@ function Home() {
         <Typography variant="h2" gutterBottom>
           HOME
         </Typography>
-        {/* <Button
+        <Button
           variant="contained"
           color="primary"
           onClick={() => navigate("/todo")}
         >
           Go to Todo List
-        </Button> */}
+        </Button>
       </Box>
     </Container>
   );
