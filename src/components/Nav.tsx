@@ -7,12 +7,25 @@ import {
   Typography,
   useMediaQuery,
   useTheme,
+  Menu,
+  MenuItem,
 } from "@mui/material";
+import { useState } from "react";
 
 function Nav() {
   const location = useLocation();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   const getButtonStyle = (path: any) => {
     return location.pathname === path
@@ -64,52 +77,71 @@ function Nav() {
             Home
           </Button>
           <Button
-            component={Link}
-            to="/todo"
+            component="div"
+            onClick={handleClick}
             variant="outlined"
-            sx={getButtonStyle("/todo")}
+            sx={{ color: "black", borderColor: "transparent" }}
           >
-            Todo
+            Project
           </Button>
+          <Menu
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            MenuListProps={{ onMouseLeave: handleClose }}
+            sx={{
+              "& .MuiPaper-root": {
+                backgroundColor: "white",
+                color: "black",
+                minWidth: "100px",
+                boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+                border: "1px solid rgba(0, 0, 0, 0.1)",
+              },
+              "& .MuiMenuItem-root": {
+                justifyContent: "center",
+              },
+            }}
+          >
+            <MenuItem
+              component={Link}
+              to="/antd"
+              onClick={handleClose}
+              sx={getButtonStyle("/antd")}
+            >
+              Antd
+            </MenuItem>
+            <MenuItem
+              component={Link}
+              to="/card"
+              onClick={handleClose}
+              sx={getButtonStyle("/card")}
+            >
+              Card
+            </MenuItem>
+            <MenuItem
+              component={Link}
+              to="/word"
+              onClick={handleClose}
+              sx={getButtonStyle("/word")}
+            >
+              Word
+            </MenuItem>
+            <MenuItem
+              component={Link}
+              to="/todo"
+              onClick={handleClose}
+              sx={getButtonStyle("/todo")}
+            >
+              Todo
+            </MenuItem>
+          </Menu>
           <Button
             component={Link}
-            to="/word"
+            to="/contact"
             variant="outlined"
-            sx={getButtonStyle("/word")}
+            sx={getButtonStyle("/contact")}
           >
-            Word
-          </Button>
-          <Button
-            component={Link}
-            to="/landingpage"
-            variant="outlined"
-            sx={getButtonStyle("/landingpage")}
-          >
-            Landing Page
-          </Button>
-          <Button
-            component={Link}
-            to="/card"
-            variant="outlined"
-            sx={getButtonStyle("/card")}
-          >
-            Card
-          </Button>
-          <Button
-            component={Link}
-            to="/antd"
-            variant="outlined"
-            sx={getButtonStyle("/antd")}
-          >
-            Antd
-          </Button>
-          <Button
-            component={Link}
-            to="/shopping_cart"
-            variant="outlined"
-            sx={getButtonStyle("/shopping_cart")}
-          >
-            Card
+            Contact
           </Button>
         </Box>
       </Toolbar>
