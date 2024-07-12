@@ -6,9 +6,13 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
+  IconButton,
   TextField,
+  Tooltip,
   Typography,
 } from "@mui/material";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
 
 interface TodoItemProps {
   todo: string;
@@ -39,27 +43,29 @@ const TodoItem: React.FC<TodoItemProps> = ({
       alignItems="center"
       justifyContent="space-between"
       padding={2}
-      borderBottom="1px solid #ddd"
+      borderBottom="1px solid #eee"
+      bgcolor="#fff"
+      boxShadow="0px 1px 3px rgba(0, 0, 0, 0.1)"
+      borderRadius="8px"
       marginBottom={2}
     >
-      <Typography flexGrow={1} marginRight={2}>
+      <Typography flexGrow={1} marginRight={2} color="textSecondary">
         {todo}
       </Typography>
-      <Button
-        variant="contained"
-        color="warning"
-        onClick={() => setIsEditing(true)}
-        sx={{ marginRight: 1 }}
-      >
-        Edit
-      </Button>
-      <Button
-        variant="contained"
-        color="error"
-        onClick={() => removeTodo(index)}
-      >
-        Remove
-      </Button>
+      <Tooltip title="Edit">
+        <IconButton
+          color="inherit"
+          onClick={() => setIsEditing(true)}
+          sx={{ marginRight: 1 }}
+        >
+          <EditIcon />
+        </IconButton>
+      </Tooltip>
+      <Tooltip title="Delete">
+        <IconButton color="error" onClick={() => removeTodo(index)}>
+          <DeleteIcon />
+        </IconButton>
+      </Tooltip>
 
       <Dialog open={isEditing} onClose={() => setIsEditing(false)}>
         <DialogTitle>Edit Todo</DialogTitle>
@@ -73,13 +79,19 @@ const TodoItem: React.FC<TodoItemProps> = ({
           />
         </DialogContent>
         <DialogActions>
-          <Button variant="contained" color="warning" onClick={handleEdit}>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={handleEdit}
+            sx={{ backgroundColor: "#4caf50", color: "#fff" }}
+          >
             Save
           </Button>
           <Button
             variant="contained"
-            color="error"
+            color="inherit"
             onClick={() => setIsEditing(false)}
+            sx={{ backgroundColor: "#f44336", color: "#fff" }}
           >
             Cancel
           </Button>

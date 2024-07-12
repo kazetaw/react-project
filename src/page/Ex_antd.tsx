@@ -9,7 +9,6 @@ import {
   Checkbox,
   DatePicker,
   Steps,
-  theme,
   Space,
   Switch,
 } from "antd";
@@ -48,7 +47,13 @@ const steps = [
         <Form.Item
           name="email"
           label="Email"
-          rules={[{ required: true, message: "Please enter your email" }]}
+          rules={[
+            { required: true, message: "Please enter your email" },
+            {
+              type: "email",
+              message: "The input is not valid E-mail!",
+            },
+          ]}
         >
           <Input />
         </Form.Item>
@@ -56,7 +61,14 @@ const steps = [
           name="phone"
           label="Phone"
           rules={[
-            { required: true, message: "Please enter your phone number" },
+            {
+              required: true,
+              message: "Please enter your phone number",
+            },
+            {
+              pattern: /^[0-9]{10}$/,
+              message: "Phone number must be exactly 10 digits",
+            },
           ]}
         >
           <Input />
@@ -105,12 +117,19 @@ const steps = [
           label="Other Hobby"
           rules={[{ required: false }]}
         >
-          <Input placeholder="ระบุ" />
+          <Input placeholder="Enter other hobby" />
         </Form.Item>
         <Form.Item
           name="acceptTerms"
           valuePropName="checked"
-          rules={[{ required: true, message: "Please select your gender" }]}
+          // rules={[
+          //   {
+          //     validator: (_, value) =>
+          //       value
+          //         ? Promise.resolve()
+          //         : Promise.reject("Please accept the terms"),
+          //   },
+          // ]}
         >
           <Switch /> <span>Accept the terms</span>
         </Form.Item>
@@ -119,8 +138,7 @@ const steps = [
   },
 ];
 
-const App: React.FC = () => {
-  const { token } = theme.useToken();
+const MyForm: React.FC = () => {
   const [current, setCurrent] = useState(0);
   const [form] = Form.useForm();
   const [formData, setFormData] = useState({});
@@ -148,7 +166,6 @@ const App: React.FC = () => {
         const finalFormData = { ...formData, ...values };
         console.log("Form Values:", finalFormData);
         message.success("Processing complete!");
-        // Log all values
         console.log("Username:", finalFormData.username);
         console.log("Password:", finalFormData.password);
         console.log("Email:", finalFormData.email);
@@ -171,7 +188,7 @@ const App: React.FC = () => {
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
-    background: "linear-gradient(45deg, #FF69B4, #8A2BE2, #00CED1)",
+    background: "linear-gradient(45deg, #fdfffd, #8aaed6, #6c6695)",
   };
 
   return (
@@ -189,17 +206,17 @@ const App: React.FC = () => {
         </Form>
         <div style={{ marginTop: 24 }}>
           {current < steps.length - 1 && (
-            <Button type="primary" onClick={() => next()}>
+            <Button type="primary" onClick={next}>
               Next
             </Button>
           )}
           {current === steps.length - 1 && (
-            <Button type="primary" onClick={() => handleSubmit()}>
+            <Button type="primary" onClick={handleSubmit}>
               Done
             </Button>
           )}
           {current > 0 && (
-            <Button style={{ margin: "0 8px" }} onClick={() => prev()}>
+            <Button style={{ margin: "0 8px" }} onClick={prev}>
               Previous
             </Button>
           )}
@@ -209,4 +226,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default MyForm;

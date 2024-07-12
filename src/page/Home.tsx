@@ -36,7 +36,7 @@ function Home() {
               className="rounded-t-lg"
               src="src\image\todos.png"
               alt=""
-              style={{ width: "270px", height: "200px", objectFit: "cover" }}
+              style={{ width: "800px", height: "200px", objectFit: "cover" }}
             />
           </a>
           <div className="p-5">
@@ -88,9 +88,9 @@ function Home() {
           <a href="#">
             <img
               className="rounded-t-lg"
-              src="src\image\todo.png"
+              src="src\image\word.png"
               alt=""
-              style={{ width: "270px", height: "200px", objectFit: "cover" }}
+              style={{ width: "800px", height: "200px", objectFit: "cover" }}
             />
           </a>
           <div className="p-5">
@@ -144,7 +144,7 @@ function Home() {
               className="rounded-t-lg"
               src="src\image\land.png"
               alt=""
-              style={{ width: "270px", height: "200px", objectFit: "cover" }}
+              style={{ width: "800px", height: "200px", objectFit: "cover" }}
             />
           </a>
           <div className="p-5">
@@ -198,7 +198,7 @@ function Home() {
               className="rounded-t-lg"
               src="src\image\card.png"
               alt=""
-              style={{ width: "270px", height: "200px", objectFit: "cover" }}
+              style={{ width: "800px", height: "200px", objectFit: "cover" }}
             />
           </a>
           <div className="p-5">
@@ -252,7 +252,7 @@ function Home() {
               className="rounded-t-lg"
               src="src\image\sign.png"
               alt=""
-              style={{ width: "270px", height: "200px", objectFit: "cover" }}
+              style={{ width: "800px", height: "200px", objectFit: "cover" }}
             />
           </a>
           <div className="p-5">
@@ -306,7 +306,7 @@ function Home() {
               className="rounded-t-lg"
               src="src\image\cart.png"
               alt=""
-              style={{ width: "270px", height: "200px", objectFit: "cover" }}
+              style={{ width: "800px", height: "200px", objectFit: "cover" }}
             />
           </a>
           <div className="p-5">
