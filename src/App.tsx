@@ -38,10 +38,6 @@ const Router = createBrowserRouter([
         element: <CheckList />,
       },
       {
-        path: "landingpage",
-        element: <Landingpage />,
-      },
-      {
         path: "card",
         element: <Card_ws />,
       },
@@ -59,6 +55,10 @@ const Router = createBrowserRouter([
         element: <Home />,
       },
     ],
+  },
+  {
+    path: "landingpage",
+    element: <Landingpage />,
   },
 ]);
 

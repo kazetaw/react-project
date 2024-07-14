@@ -119,18 +119,7 @@ const steps = [
         >
           <Input placeholder="Enter other hobby" />
         </Form.Item>
-        <Form.Item
-          name="acceptTerms"
-          valuePropName="checked"
-          // rules={[
-          //   {
-          //     validator: (_, value) =>
-          //       value
-          //         ? Promise.resolve()
-          //         : Promise.reject("Please accept the terms"),
-          //   },
-          // ]}
-        >
+        <Form.Item name="acceptTerms" valuePropName="checked">
           <Switch /> <span>Accept the terms</span>
         </Form.Item>
       </>

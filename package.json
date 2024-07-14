@@ -24,7 +24,8 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.24.1",
     "save": "^2.9.0",
-    "sunflower-antd": "^1.0.0-beta.3"
+    "sunflower-antd": "^1.0.0-beta.3",
+    "swiper": "^11.1.4"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

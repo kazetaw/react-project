@@ -60,7 +60,7 @@ const Cart: React.FC<CartProps> = ({ cart, addItem, removeItem }) => {
       {cart.length === 0 ? (
         <button
           type="button"
-          className="relative inline-flex items-center p-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ml-auto"
+          className="relative inline-flex items-center p-3 text-sm font-medium text-center text-black  rounded-lg  focus:ring-4 focus:outline-none  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ml-auto"
           onClick={handleDialogOpen}
         >
           <svg
@@ -79,7 +79,7 @@ const Cart: React.FC<CartProps> = ({ cart, addItem, removeItem }) => {
       ) : (
         <button
           type="button"
-          className="relative inline-flex items-center p-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ml-auto"
+          className="relative inline-flex items-center p-3 text-sm font-medium text-center text-gray-900  rounded-lg  focus:ring-4 focus:outline-none  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ml-auto"
           onClick={handleDialogOpen}
         >
           <svg
@@ -112,16 +112,16 @@ const Cart: React.FC<CartProps> = ({ cart, addItem, removeItem }) => {
               <thead>
                 <tr className="border border-grey-500">
                   <th className="bg-gray-600 p-2 text-white font-bold border text-left">
-                    Name
+                    ชื่อสินค้า
                   </th>
                   <th className="bg-gray-600 p-2 text-white font-bold border text-left">
-                    Price
+                    ราคา
                   </th>
                   <th className="bg-gray-600 p-2 text-white font-bold border text-left">
-                    Quantity
+                    จำนวน
                   </th>
                   <th className="bg-gray-600 p-2 text-white font-bold border text-left">
-                    Total
+                    รวม
                   </th>
                   <th className="bg-gray-600 p-2 text-white font-bold border text-left">
                     Action

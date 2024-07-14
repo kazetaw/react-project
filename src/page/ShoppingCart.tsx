@@ -6,10 +6,11 @@ import Cart from "../components/Cart";
 interface Product {
   name: string;
   price: number;
-  category: string; // Corrected spelling from 'category' to 'category'
+  category: string;
   quantity: number;
   product_id: string;
   balance: number;
+  image: string; // URL of the product image
 }
 
 interface CartItem {
@@ -27,6 +28,8 @@ const initialProducts: Product[] = [
     quantity: 8,
     product_id: "A004",
     balance: 8,
+    image:
+      "https://st.bigc-cs.com/cdn-cgi/image/format=webp,quality=90/public/media/catalog/product/40/20/2000007640740/2000007640740_1-20230303123713-.jpg",
   },
   {
     name: "กางเกงออกกำลังกาย",
@@ -35,6 +38,8 @@ const initialProducts: Product[] = [
     quantity: 12,
     product_id: "A005",
     balance: 12,
+    image:
+      "https://res.cloudinary.com/trueshopping/image/upload/f_webp,q_auto/v1694505641/product/producr-master/gkuhn7xssh2zcbvubjij.jpg",
   },
   {
     name: "รองเท้าวิ่ง",
@@ -43,6 +48,8 @@ const initialProducts: Product[] = [
     quantity: 6,
     product_id: "A006",
     balance: 6,
+    image:
+      "https://res.wemall.com/954888/w_640,h_640,c_thumb/w_640,h_640,c_crop/d6b2576d1d181f8160948fb60cd7c23a/067-078-%E0%B8%94%E0%B8%B3-2.jpg",
   },
   {
     name: "เสื้อเเจ็คเก็ต",
@@ -51,6 +58,8 @@ const initialProducts: Product[] = [
     quantity: 20,
     product_id: "A007",
     balance: 20,
+    image:
+      "https://f.btwcdn.com/store-35589/product/2dda86ba-7eee-1a9b-450a-660cccbd5728.jpg ",
   },
   {
     name: "กางเกงยีนส์",
@@ -59,6 +68,8 @@ const initialProducts: Product[] = [
     quantity: 15,
     product_id: "A008",
     balance: 15,
+    image:
+      "https://st.bigc-cs.com/cdn-cgi/image/format=webp,quality=90/public/media/catalog/product/76/20/2000007529076/2000007529076_2-20230925134048-.jpg",
   },
   {
     name: "รองเท้าบูท",
@@ -67,6 +78,8 @@ const initialProducts: Product[] = [
     quantity: 10,
     product_id: "A009",
     balance: 10,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi9h-i8acumKx0-mqEc0BbK2IZTO6iNPwx8w&s",
   },
   {
     name: "กระเป๋าสะพาย",
@@ -75,6 +88,8 @@ const initialProducts: Product[] = [
     quantity: 25,
     product_id: "A0010",
     balance: 25,
+    image:
+      "https://img.lazcdn.com/g/p/6fbfe0d1b5c45d7c8a1a0e224f6e190d.jpg_720x720q80.jpg",
   },
   {
     name: "เสื้อโปโลสีดำ",
@@ -83,6 +98,7 @@ const initialProducts: Product[] = [
     quantity: 40,
     product_id: "A011",
     balance: 40,
+    image: "https://media.allonline.7eleven.co.th/pdmain/396263_00_gq_polo.jpg",
   },
   {
     name: "กางเกงขาสั้น",
@@ -91,6 +107,8 @@ const initialProducts: Product[] = [
     quantity: 40,
     product_id: "A0012",
     balance: 40,
+    image:
+      "https://res.cloudinary.com/trueshopping/image/upload/f_webp,q_auto/v1694506060/product/producr-master/mdbcyu3crz6k8nyic62i.jpg",
   },
   {
     name: "รองเท้าเเตะสีน้ำเงิน",
@@ -99,6 +117,8 @@ const initialProducts: Product[] = [
     quantity: 20,
     product_id: "A013",
     balance: 20,
+    image:
+      "https://poloclubthailand.com/pub/media/catalog/product/cache/c7a2609edde15cd194a9cb9af2917d57/2/7/2733-_2_1.jpg",
   },
   {
     name: "กระเป๋าสะพายสีแดง",
@@ -107,6 +127,8 @@ const initialProducts: Product[] = [
     quantity: 35,
     product_id: "A014",
     balance: 35,
+    image:
+      "https://f.btwcdn.com/store-38058/product/53037e65-c423-4e21-9352-5b59d7628227.jpg",
   },
   {
     name: "ถุงเท้า",
@@ -115,6 +137,7 @@ const initialProducts: Product[] = [
     quantity: 50,
     product_id: "A015",
     balance: 50,
+    image: "https://carson.co.th/wp-content/uploads/2023/04/AB-120-3.jpg",
   },
 ];
 
@@ -164,13 +187,7 @@ const ShoppingCart: React.FC = () => {
 
   return (
     <div className="p-5">
-      <Cart
-        cart={cart}
-        removeItem={removeItem}
-        addItem={function (productId: string): void {
-          throw new Error("Function not implemented.");
-        }}
-      />
+      <Cart cart={cart} removeItem={removeItem} addItem={addItem} />
       <h1 className="text-2xl font-bold mb-4">สินค้าทั้งหมด</h1>
       <CategoryList />
       <ProductList products={products} addItem={addItem} />

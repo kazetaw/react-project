@@ -67,9 +67,7 @@ const TodoList: React.FC = () => {
             marginBottom: 2,
           }}
         >
-          <Typography variant="h5" component="h2" gutterBottom>
-            Add New Todo
-          </Typography>
+          <Typography variant="h5" component="h2" gutterBottom></Typography>
           <Box display="flex" alignItems="center">
             <TextField
               fullWidth
@@ -96,13 +94,11 @@ const TodoList: React.FC = () => {
             backgroundColor: "#ffffff",
             borderRadius: 2,
             boxShadow: 2,
-            height: 550, // Fixed height
+            height: 550,
             overflowY: "auto",
           }}
         >
-          <Typography variant="h5" component="h2" gutterBottom>
-            Todo List
-          </Typography>
+          <Typography variant="h5" component="h2" gutterBottom></Typography>
           <Box>
             {todosToDisplay.map((todo, index) => (
               <TodoItem

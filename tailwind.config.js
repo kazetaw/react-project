@@ -12,10 +12,10 @@ export default {
       },
     },
     screens: {
+      xs: { min: "365px" },
+      sm: { min: "767px" },
+      md: { min: "1023px" },
       lg: { min: "1024px" },
-      // md: { max: "992" },
-      // sm: { max: "768" },
-      // xs: { max: "576" },
     },
   },
   plugins: [],

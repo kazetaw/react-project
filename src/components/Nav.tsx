@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   AppBar,
@@ -7,39 +8,67 @@ import {
   Typography,
   useMediaQuery,
   useTheme,
-  Menu,
-  MenuItem,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
 } from "@mui/material";
-import { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
-function Nav() {
+const Nav = () => {
   const location = useLocation();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
+  const toggleDrawer = (open: boolean) => () => {
+    setDrawerOpen(open);
   };
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  const getButtonStyle = (path: any) => {
+  const getButtonStyle = (path: string) => {
     return location.pathname === path
       ? { color: "white", backgroundColor: "black", borderColor: "black" }
       : { color: "black", borderColor: "transparent" };
   };
 
+  const drawer = (
+    <Box
+      sx={{ width: 250 }}
+      role="presentation"
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
+    >
+      <IconButton sx={{ ml: "auto" }}>
+        <CloseIcon />
+      </IconButton>
+      <List>
+        <ListItem button component={Link} to="/home">
+          <ListItemText primary="Home" />
+        </ListItem>
+        <ListItem button component={Link} to="/about">
+          <ListItemText primary="About" />
+        </ListItem>
+        <ListItem button component={Link} to="/services">
+          <ListItemText primary="Services" />
+        </ListItem>
+        <ListItem button component={Link} to="/pricing">
+          <ListItemText primary="Pricing" />
+        </ListItem>
+        <ListItem button component={Link} to="/contact">
+          <ListItemText primary="Contact" />
+        </ListItem>
+      </List>
+    </Box>
+  );
+
   return (
     <AppBar
-      position="static"
+      position="sticky"
       sx={{
         backgroundColor: "white",
         boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-        padding: isMobile ? "0.5rem" : "1rem",
       }}
     >
       <Toolbar
@@ -49,104 +78,83 @@ function Nav() {
           alignItems: "center",
         }}
       >
-        <Typography
-          variant="h6"
+        <Box
           component={Link}
           to="/"
           sx={{
-            color: "black",
-            textDecoration: "none",
-          }}
-        >
-          LOGO
-        </Typography>
-        <Box
-          sx={{
             display: "flex",
-            flexDirection: isMobile ? "column" : "row",
             alignItems: "center",
-            gap: 2,
+            textDecoration: "none",
+            color: "black",
           }}
         >
-          <Button
-            component={Link}
-            to="/home"
-            variant="outlined"
-            sx={getButtonStyle("/home")}
-          >
-            Home
-          </Button>
-          <Button
-            component="div"
-            onClick={handleClick}
-            variant="outlined"
-            sx={{ color: "black", borderColor: "transparent" }}
-          >
-            Project
-          </Button>
-          <Menu
-            anchorEl={anchorEl}
-            open={open}
-            onClose={handleClose}
-            MenuListProps={{ onMouseLeave: handleClose }}
+          <img
+            src="https://static-00.iconduck.com/assets.00/slow-motion-video-icon-512x511-arswqh3e.png"
+            alt="Flowbite Logo"
+            style={{ height: 32, marginRight: 8 }}
+          />
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            MyLogo
+          </Typography>
+        </Box>
+        {isMobile ? (
+          <>
+            <IconButton
+              edge="end"
+              color="inherit"
+              aria-label="menu"
+              onClick={toggleDrawer(true)}
+              sx={{ color: "black" }} // Set the color to black
+            >
+              <MenuIcon />
+            </IconButton>
+            <Drawer
+              anchor="right"
+              open={drawerOpen}
+              onClose={toggleDrawer(false)}
+            >
+              {drawer}
+            </Drawer>
+          </>
+        ) : (
+          <Box
             sx={{
-              "& .MuiPaper-root": {
-                backgroundColor: "white",
-                color: "black",
-                minWidth: "100px",
-                boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-                border: "1px solid rgba(0, 0, 0, 0.1)",
-              },
-              "& .MuiMenuItem-root": {
-                justifyContent: "center",
-              },
+              display: "flex",
+              gap: 2,
             }}
           >
-            <MenuItem
+            <Button component={Link} to="/home" sx={getButtonStyle("/home")}>
+              Home
+            </Button>
+            <Button component={Link} to="/about" sx={getButtonStyle("/about")}>
+              About
+            </Button>
+            <Button
               component={Link}
-              to="/antd"
-              onClick={handleClose}
-              sx={getButtonStyle("/antd")}
+              to="/services"
+              sx={getButtonStyle("/services")}
             >
-              Antd
-            </MenuItem>
-            <MenuItem
+              Services
+            </Button>
+            <Button
               component={Link}
-              to="/card"
-              onClick={handleClose}
-              sx={getButtonStyle("/card")}
+              to="/pricing"
+              sx={getButtonStyle("/pricing")}
             >
-              Card
-            </MenuItem>
-            <MenuItem
+              Pricing
+            </Button>
+            <Button
               component={Link}
-              to="/word"
-              onClick={handleClose}
-              sx={getButtonStyle("/word")}
+              to="/contact"
+              sx={getButtonStyle("/contact")}
             >
-              Word
-            </MenuItem>
-            <MenuItem
-              component={Link}
-              to="/todo"
-              onClick={handleClose}
-              sx={getButtonStyle("/todo")}
-            >
-              Todo
-            </MenuItem>
-          </Menu>
-          <Button
-            component={Link}
-            to="/contact"
-            variant="outlined"
-            sx={getButtonStyle("/contact")}
-          >
-            Contact
-          </Button>
-        </Box>
+              Contact
+            </Button>
+          </Box>
+        )}
       </Toolbar>
     </AppBar>
   );
-}
+};
 
 export default Nav;

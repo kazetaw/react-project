@@ -1,9 +1,10 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
 import Words from "./words.json";
 import WordList from "../components/WordList";
-
+import "./styles/Checklist.css";
 interface Word {
   word: string;
   lang: "th" | "en";
@@ -85,53 +86,75 @@ const CheckList: React.FC = () => {
 
     return () => clearInterval(interval);
   }, [lockedWords]);
+  const containerStyle: React.CSSProperties = {
+    background: "#fdfffd",
+    borderRadius: 9,
+
+  };
 
   return (
+    <div className="bodychecklist">
     <Box sx={{ p: 2 }}>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          mb: 2,
-        }}
-      >
-        <Box sx={{ flex: 1, mx: 0.5 }}>
-          <Typography sx={{ textAlign: "center" }}>คำศัพท์</Typography>
-        </Box>
-        <Box sx={{ flex: 1, mx: 0.5 }}>
-          <Typography sx={{ textAlign: "center" }}>ภาษาไทย</Typography>
-        </Box>
-        <Box sx={{ flex: 1, mx: 0.5 }}>
-          <Typography sx={{ textAlign: "center" }}>ภาษาอังกฤษ</Typography>
-        </Box>
-      </Box>
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        <WordList
-          title=""
-          words={vocabulary}
-          timers={timers}
-          lockedWords={lockedWords}
-          onWordClick={handleWordClick}
-          onToggleLock={toggleLock}
-        />
-        <WordList
-          title=""
-          words={thaiWords}
-          timers={timers}
-          lockedWords={lockedWords}
-          onWordClick={handleWordClick}
-          onToggleLock={toggleLock}
-        />
-        <WordList
-          title=""
-          words={englishWords}
-          timers={timers}
-          lockedWords={lockedWords}
-          onWordClick={handleWordClick}
-          onToggleLock={toggleLock}
-        />
-      </Box>
-    </Box>
+      <h1 className="text-3xl font-bold text-center justify-center mt-10 mb-10">
+        คำศัพท์แยกภาษา
+      </h1>
+      <Grid container spacing={2} justifyContent="center">
+        <Grid item xs={12} sm={4}>
+          <Typography
+            style={containerStyle}
+            variant="h6"
+            align="center"
+            gutterBottom
+          >
+            คำศัพท์
+          </Typography>
+          <WordList
+            title=""
+            words={vocabulary}
+            timers={timers}
+            lockedWords={lockedWords}
+            onWordClick={handleWordClick}
+            onToggleLock={toggleLock}
+          />
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Typography
+            style={containerStyle}
+            variant="h6"
+            align="center"
+            gutterBottom
+          >
+            ภาษาไทย
+          </Typography>
+          <WordList
+            title=""
+            words={thaiWords}
+            timers={timers}
+            lockedWords={lockedWords}
+            onWordClick={handleWordClick}
+            onToggleLock={toggleLock}
+          />
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Typography
+            style={containerStyle}
+            variant="h6"
+            align="center"
+            gutterBottom
+          >
+            ภาษาอังกฤษ
+          </Typography>
+          <WordList
+            title=""
+            words={englishWords}
+            timers={timers}
+            lockedWords={lockedWords}
+            onWordClick={handleWordClick}
+            onToggleLock={toggleLock}
+          />
+        </Grid>
+      </Grid>
+    </Box></div>
   );
 };
 
