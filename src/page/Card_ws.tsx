@@ -20,8 +20,8 @@ function Card() {
                   <div className="absolute w-[80px] h-[120px] bottom-0 right-1/2 left-7 translate-x-1/2 bg-gradient-to-t from-blue-400 to-gray-950 md:block hidden"></div>
 
                   {/* แนวนอน */}
-                  <div className="x:block hidden absolute w-[160.5px] h-[80px] top-20 right-0 -left-20 translate-x-1/2 bg-gradient-to-l from-gray-950 to-blue-400"></div>
-                  <div className="x:block hidden absolute w-[236.5px] h-[80px] top-20 right-10 left-7 translate-x-1/2 bg-gradient-to-l from-blue-400 to-gray-950 md:bottom-auto md:translate-x-0 md:right-auto md:h-[80px] md:w-[120px] md:left-0 md:top-1/2 md:translate-y-1/2"></div>
+                  <div className="absolute w-[160.5px] h-[80px] top-20 right-0 -left-20 translate-x-1/2 bg-gradient-to-l from-gray-950 to-blue-400 block md:hidden"></div>
+                  <div className="absolute w-[236.5px] h-[80px] top-20 right-10 left-7 translate-x-1/2 bg-gradient-to-l from-blue-400 to-gray-950 block md:hidden"></div>
 
                   <div className="grid lg:grid-cols-2 lg:grid-rows-1 grid-cols-1 grid-rows-2 gap-4 items-center">
                     <div className="relative ...">
@@ -285,8 +285,8 @@ function Card() {
                     <div className="absolute w-[80px] h-[120px] bottom-0 right-0 left-1/2 translate-x-12 bg-gradient-to-t from-blue-400 to-gray-950 md:block hidden"></div>
 
                     {/* แนวนอน */}
-                    <div className="x:block hidden absolute w-[160.5px] h-[80px] top-72 right-0 -left-20 translate-x-1/2 bg-gradient-to-l from-gray-950 to-blue-400"></div>
-                    <div className="x:block hidden absolute w-[236.5px] h-[80px] top-72 right-10 left-7 translate-x-1/2 bg-gradient-to-l from-blue-400 to-gray-950 md:bottom-auto md:translate-x-0 md:right-auto md:h-[80px] md:w-[120px] md:left-0 md:top-1/2 md:translate-y-1/2"></div>
+                    <div className="md:hidden absolute w-[160.5px] h-[80px] top-72 right-0 -left-20 translate-x-1/2 bg-gradient-to-l from-gray-950 to-blue-400"></div>
+                    <div className="md:hidden absolute w-[236.5px] h-[80px] top-72 right-10 left-7 translate-x-1/2 bg-gradient-to-l from-blue-400 to-gray-950 md:bottom-auto md:translate-x-0 md:right-auto md:h-[80px] md:w-[120px] md:left-0 md:top-1/2 md:translate-y-1/2"></div>
 
                     <div className="relative justify-center items-center">
                       <div
