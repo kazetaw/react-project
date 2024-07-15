@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
   Button,
   Card,
@@ -13,6 +14,9 @@ import {
   Switch,
 } from "antd";
 import Title from "antd/es/typography/Title";
+import { RootState } from "../store/store";
+import { updateForm } from "../store/slice/formSlice";
+// import moment from "moment";
 
 const steps = [
   {
@@ -49,10 +53,7 @@ const steps = [
           label="Email"
           rules={[
             { required: true, message: "Please enter your email" },
-            {
-              type: "email",
-              message: "The input is not valid E-mail!",
-            },
+            { type: "email", message: "The input is not valid E-mail!" },
           ]}
         >
           <Input />
@@ -61,10 +62,7 @@ const steps = [
           name="phone"
           label="Phone"
           rules={[
-            {
-              required: true,
-              message: "Please enter your phone number",
-            },
+            { required: true, message: "Please enter your phone number" },
             {
               pattern: /^[0-9]{10}$/,
               message: "Phone number must be exactly 10 digits",
@@ -112,15 +110,13 @@ const steps = [
             <Checkbox value="other">Other</Checkbox>
           </Checkbox.Group>
         </Form.Item>
-        <Form.Item
-          name="otherHobby"
-          label="Other Hobby"
-          rules={[{ required: false }]}
-        >
+        <Form.Item name="otherHobby" label="Other Hobby">
           <Input placeholder="Enter other hobby" />
         </Form.Item>
         <Form.Item name="acceptTerms" valuePropName="checked">
-          <Switch /> <span>Accept the terms</span>
+          <div>
+            <Switch /> <span>Accept the terms</span>
+          </div>
         </Form.Item>
       </>
     ),
@@ -130,13 +126,17 @@ const steps = [
 const MyForm: React.FC = () => {
   const [current, setCurrent] = useState(0);
   const [form] = Form.useForm();
-  const [formData, setFormData] = useState({});
+  const dispatch = useDispatch();
+  const formData = useSelector((state: RootState) => state.form);
 
   const next = () => {
     form
       .validateFields(steps[current].fields)
       .then((values) => {
-        setFormData({ ...formData, ...values });
+        if (values.birthdate) {
+          values.birthdate = values.birthdate.format("YYYY-MM-DD");
+        }
+        dispatch(updateForm(values));
         setCurrent(current + 1);
       })
       .catch((info) => {
@@ -152,18 +152,12 @@ const MyForm: React.FC = () => {
     form
       .validateFields()
       .then((values) => {
-        const finalFormData = { ...formData, ...values };
-        console.log("Form Values:", finalFormData);
+        if (values.birthdate) {
+          values.birthdate = values.birthdate.format("YYYY-MM-DD");
+        }
+        dispatch(updateForm(values));
         message.success("Processing complete!");
-        console.log("Username:", finalFormData.username);
-        console.log("Password:", finalFormData.password);
-        console.log("Email:", finalFormData.email);
-        console.log("Phone:", finalFormData.phone);
-        console.log("Birthdate:", finalFormData.birthdate);
-        console.log("Gender:", finalFormData.gender);
-        console.log("Hobbies:", finalFormData.hobbies);
-        console.log("Other Hobby:", finalFormData.otherHobby);
-        console.log("Accept Terms:", finalFormData.acceptTerms);
+        console.log("Form Values:", formData);
       })
       .catch((info) => {
         console.log("Validate Failed:", info);

@@ -10,6 +10,9 @@ import Card_ws from "./page/Card_ws";
 import Ex_antd from "./page/Ex_antd";
 // import { Card } from "antd";
 import ShoppingCart from "./page/ShoppingCart";
+import { store } from "./store/store";
+import { Provider } from "react-redux";
+import { Redux } from "./page/Redux";
 const MainLayout = () => (
   <>
     <Nav />
@@ -60,13 +63,17 @@ const Router = createBrowserRouter([
     path: "landingpage",
     element: <Landingpage />,
   },
+  {
+    path: "count",
+    element: <Redux />,
+  },
 ]);
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <RouterProvider router={Router} />
-    </>
+    </Provider>
   );
 }
 
