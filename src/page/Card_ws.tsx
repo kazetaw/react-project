@@ -144,7 +144,7 @@ function Card() {
                           <p className="font-bold text-blue-500 text-xs">
                             Phone
                           </p>
-                          <p className="font-bold text-white text-xs">
+                          <p className="font-sm text-white text-xs">
                             099 999 999
                           </p>
                           <hr style={{}} className="solid-vertical" />
@@ -192,7 +192,7 @@ function Card() {
                           <p className="font-bold text-blue-500 text-xs">
                             Email
                           </p>
-                          <p className="font-bold text-white text-xs">
+                          <p className="font-sm text-white text-xs">
                             user@gmail.com
                           </p>
                           <hr style={{}} className="solid-vertical" />
@@ -235,7 +235,7 @@ function Card() {
                           <p className="font-bold text-blue-500 text-xs">
                             Location
                           </p>
-                          <p className="font-bold text-white text-xs">
+                          <p className="font-sm text-white text-xs">
                             Address here City
                           </p>
                           <hr style={{}} className="solid-vertical" />
@@ -274,7 +274,7 @@ function Card() {
                           <p className="font-bold text-blue-500 text-xs">
                             Website
                           </p>
-                          <p className="font-bold text-white text-xs">
+                          <p className="font-sm text-white text-xs">
                             Youwebsite.com
                           </p>
                           <hr style={{}} className="solid-vertical" />
