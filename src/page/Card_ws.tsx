@@ -296,7 +296,7 @@ function Card() {
                           overflow: "hidden",
                           borderRadius: "50%",
                         }}
-                        className="bottom-0 left-0 lex justify-center items-center"
+                        className="absolute bottom-0 top-6 left-0 justify-center items-center"
                       >
                         <img
                           style={{
@@ -316,7 +316,7 @@ function Card() {
                           borderRadius: "50%",
                           display: "flex",
                         }}
-                        className="absolute bottom-0 top-1 left-1 justify-center items-center"
+                        className="absolute bottom-0 top-7 left-1 justify-center items-center"
                       >
                         <img
                           style={{
