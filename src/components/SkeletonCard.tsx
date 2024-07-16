@@ -9,7 +9,7 @@ const SkeletonCard: React.FC = () => {
         <div className="grid grid-cols-7 gap-7 justify-center text-center">
           {Array.from({ length: 6 }).map((_, index) => (
             <div key={index} className="grid grid-rows-2 text-center">
-              <div className="text-lg text-center bg-gray-300 h-6 w-6 mx-auto rounded dark:bg-gray-700 animate-pulse"></div>
+              {/* <div className="text-lg text-center bg-gray-300 h-6 w-6 mx-auto rounded dark:bg-gray-700 animate-pulse"></div> */}
               <div className="text-sm bg-gray-300 h-4 w-6 mx-auto rounded dark:bg-gray-700 animate-pulse"></div>
             </div>
           ))}

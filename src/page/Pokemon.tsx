@@ -11,7 +11,7 @@ function Pokemon() {
   return (
     <>
       <nav
-        className="justify-center text-center bg-black"
+        className="justify-center text-center "
         style={{
           display: "flex",
           justifyContent: "center",
@@ -24,7 +24,7 @@ function Pokemon() {
           alt=""
         />
       </nav>
-      <div className="container mx-auto 2xl mt-14">
+      <div className="container mx-auto">
         <PokemonList />
       </div>
     </>

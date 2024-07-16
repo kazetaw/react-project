@@ -53,9 +53,6 @@ const Nav = () => {
         <ListItem button component={Link} to="/pokemon">
           <ListItemText primary="Pokemon" />
         </ListItem>
-        {/* <ListItem button component={Link} to="/pokemon-detail">
-          <ListItemText primary="Pokemon Detail" />
-        </ListItem> */}
       </List>
     </Box>
   );
@@ -136,13 +133,6 @@ const Nav = () => {
               sx={getButtonStyle("/pokemon")}
             >
               Pokemon
-            </Button>
-            <Button
-              component={Link}
-              to="/pokemon-detail"
-              sx={getButtonStyle("/pokemon-detail")}
-            >
-              Pokemon Detail
             </Button>
           </Box>
         )}

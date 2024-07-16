@@ -32,6 +32,11 @@ type PokemonDetails = {
       name: string;
     };
   }[];
+  abilities: {
+    ability: {
+      name: string;
+    };
+  }[];
 };
 
 type PokemonQuery = {
@@ -44,7 +49,7 @@ export const pokemonApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "https://pokeapi.co/api/v2/" }),
   endpoints: (builder) => ({
     getPokemon: builder.query<PokemonResponse, void>({
-      query: () => `pokemon?limit=10`,
+      query: () => `pokemon?limit=20`,
     }),
     getPokemonById: builder.query<PokemonResponse, PokemonQuery>({
       query: (params) => {

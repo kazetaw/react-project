@@ -37,26 +37,24 @@ const PokemonDetails: React.FC<{ name: string }> = ({ name }) => {
   if (error) return <p>Failed to fetch details</p>;
 
   return (
-    <div className="flex justify-center">
-      <div className="px-6 py-4 text-center justify-center items-center border border-gray-200 shadow-md rounded-lg m-4">
-        <img src={data?.sprites.other.home.front_default} alt={data?.name} />
-        <div className="font-bold text-sm text-gray-700 mb-2">
-          {data?.name.toUpperCase()}
-        </div>
-        {/* stats */}
-        <div className="grid grid-cols-7 gap-7 justify-center text-center">
-          {data?.stats.map((stat, index) => (
-            <div key={index} className="grid grid-rows-2 text-center">
-              <div className="text-lg text-center">
-                {getStatIcon(stat.stat.name)}
-              </div>
-              <div className="text-sm">{stat.base_stat}</div>
+    <div className="px-6 py-4 text-center justify-center items-center border border-gray-200 shadow-md rounded-lg m-4">
+      <img src={data?.sprites.other.home.front_default} alt={data?.name} />
+      <div className="font-bold text-sm text-gray-700 mb-2">
+        {data?.name.toUpperCase()}
+      </div>
+      {/* stats */}
+      <div className="grid grid-cols-7 gap-7 justify-center text-center">
+        {data?.stats.map((stat, index) => (
+          <div key={index} className="grid grid-rows-2 text-center">
+            <div className="text-lg text-center">
+              {getStatIcon(stat.stat.name)}
             </div>
-          ))}
-        </div>
-        <div className="flex justify-center items-center">
-          <div className="text-gray-700 text-base"></div>
-        </div>
+            <div className="text-sm">{stat.base_stat}</div>
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center items-center">
+        <div className="text-gray-700 text-base"></div>
       </div>
     </div>
   );
@@ -69,17 +67,18 @@ const PokemonList: React.FC = () => {
   if (error) return <p>Failed to fetch Pokémon</p>;
 
   return (
-    <>
-      <ul className="grid grid-cols-1 justify-between gap-5 sm:grid-cols-3 md:grid-cols-5 ">
-        {data?.results.map((pokemon) => (
-          <li key={pokemon.name} className="w-1/5 p-4">
-            <Link to={`/pokemon/${pokemon.name}`}>
-              <PokemonDetails name={pokemon.name} />
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </>
+    <div className="flex flex-wrap justify-center gap-10">
+      {data?.results.map((pokemon) => (
+        <div
+          key={pokemon.name}
+          className="w-1/2 sm:w-1/4 md:w-1/6 p-2 flex justify-center"
+        >
+          <Link to={`/pokemon/${pokemon.name}`}>
+            <PokemonDetails name={pokemon.name} />
+          </Link>
+        </div>
+      ))}
+    </div>
   );
 };
 
