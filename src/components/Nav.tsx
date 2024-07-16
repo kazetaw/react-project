@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   AppBar,
@@ -44,21 +44,18 @@ const Nav = () => {
         <CloseIcon />
       </IconButton>
       <List>
-        <ListItem button component={Link} to="/home">
-          <ListItemText primary="Home" />
+        <ListItem button component={Link} to="/landingpage">
+          <ListItemText primary="Landing Page" />
         </ListItem>
-        <ListItem button component={Link} to="/about">
-          <ListItemText primary="About" />
+        <ListItem button component={Link} to="/count">
+          <ListItemText primary="Count" />
         </ListItem>
-        <ListItem button component={Link} to="/services">
-          <ListItemText primary="Services" />
+        <ListItem button component={Link} to="/pokemon">
+          <ListItemText primary="Pokemon" />
         </ListItem>
-        <ListItem button component={Link} to="/pricing">
-          <ListItemText primary="Pricing" />
-        </ListItem>
-        <ListItem button component={Link} to="/contact">
-          <ListItemText primary="Contact" />
-        </ListItem>
+        {/* <ListItem button component={Link} to="/pokemon-detail">
+          <ListItemText primary="Pokemon Detail" />
+        </ListItem> */}
       </List>
     </Box>
   );
@@ -123,32 +120,29 @@ const Nav = () => {
               gap: 2,
             }}
           >
-            <Button component={Link} to="/home" sx={getButtonStyle("/home")}>
-              Home
+            <Button
+              component={Link}
+              to="/landingpage"
+              sx={getButtonStyle("/landingpage")}
+            >
+              Landing Page
             </Button>
-            <Button component={Link} to="/about" sx={getButtonStyle("/about")}>
-              About
+            <Button component={Link} to="/count" sx={getButtonStyle("/count")}>
+              Count
             </Button>
             <Button
               component={Link}
-              to="/services"
-              sx={getButtonStyle("/services")}
+              to="/pokemon"
+              sx={getButtonStyle("/pokemon")}
             >
-              Services
+              Pokemon
             </Button>
             <Button
               component={Link}
-              to="/pricing"
-              sx={getButtonStyle("/pricing")}
+              to="/pokemon-detail"
+              sx={getButtonStyle("/pokemon-detail")}
             >
-              Pricing
-            </Button>
-            <Button
-              component={Link}
-              to="/contact"
-              sx={getButtonStyle("/contact")}
-            >
-              Contact
+              Pokemon Detail
             </Button>
           </Box>
         )}
