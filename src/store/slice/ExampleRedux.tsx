@@ -5,7 +5,7 @@ const initialState = {
 };
 
 const ExampleRedux = createSlice({
-  name: "counter",
+  name: "counter1",
   initialState,
   reducers: {
     increment: (state) => {
@@ -18,4 +18,4 @@ const ExampleRedux = createSlice({
 });
 
 export const { increment, decrement } = ExampleRedux.actions;
-export default ExampleRedux.reducer;
+export default ExampleRedux;

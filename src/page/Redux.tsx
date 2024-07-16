@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../store/store";
 import { increment } from "../store/slice/ExampleRedux";
 export const Redux = () => {
-  const amount = useSelector((state: RootState) => state.counter.value);
+  const amount = useSelector((state: RootState) => state.counter1.value);
   const dispatch = useDispatch();
   return (
     <div

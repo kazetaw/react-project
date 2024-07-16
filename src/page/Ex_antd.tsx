@@ -127,7 +127,7 @@ const MyForm: React.FC = () => {
   const [current, setCurrent] = useState(0);
   const [form] = Form.useForm();
   const dispatch = useDispatch();
-  const formData = useSelector((state: RootState) => state.form);
+  const formData = useSelector((state: RootState) => state.formantd);
 
   const next = () => {
     form

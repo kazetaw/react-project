@@ -13,6 +13,8 @@ import ShoppingCart from "./page/ShoppingCart";
 import { store } from "./store/store";
 import { Provider } from "react-redux";
 import { Redux } from "./page/Redux";
+import Pokemon from "./page/Pokemon";
+import PokemonDetail from "./page/PokemonDetail";
 const MainLayout = () => (
   <>
     <Nav />
@@ -52,7 +54,6 @@ const Router = createBrowserRouter([
         path: "shopping_cart",
         element: <ShoppingCart />,
       },
-
       {
         path: "*",
         element: <Home />,
@@ -66,6 +67,18 @@ const Router = createBrowserRouter([
   {
     path: "count",
     element: <Redux />,
+  },
+  {
+    path: "pokemon",
+    element: <Pokemon />,
+  },
+  {
+    path: "pokemon-detail",
+    element: <PokemonDetail />,
+  },
+  {
+    path: "pokemon/:name",
+    element: <PokemonDetail />,
   },
 ]);
 
