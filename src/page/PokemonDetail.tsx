@@ -7,6 +7,8 @@ import {
   useGetPokemonQuery,
 } from "../store/slice/PokemonApi";
 import { getTypeColor } from "../components/utils"; // นำเข้าฟังก์ชัน getTypeColor
+import { MdNavigateNext } from "react-icons/md";
+import { GrFormPrevious } from "react-icons/gr";
 
 const PokemonDetail = () => {
   const [activeTab, setActiveTab] = useState("INFO");
@@ -62,6 +64,9 @@ const PokemonDetail = () => {
 
   const backgroundColor = getTypeColor(data?.types[0]?.type?.name ?? "unknown");
 
+  // ฟังก์ชันสำหรับการเติมศูนย์ด้านหน้า
+  const formatNumber = (num: number) => num.toString().padStart(3, "0");
+
   return (
     <>
       <div className="container mx-auto">
@@ -106,17 +111,11 @@ const PokemonDetail = () => {
             ))}
           </div>
           <div className="flex justify-between">
-            <button
-              onClick={handlePreviousClick}
-              className="bg-gray-200 px-4 py-2 rounded"
-            >
-              ย้อนกลับ
+            <button onClick={handlePreviousClick} className=" p-2 rounded">
+              <GrFormPrevious size={24} />
             </button>
-            <button
-              onClick={handleNextClick}
-              className="bg-gray-200 px-4 py-2 rounded"
-            >
-              ถัดไป
+            <button onClick={handleNextClick} className=" p-2 rounded">
+              <MdNavigateNext size={24} />
             </button>
           </div>
           <div className="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 mt-4">
@@ -151,15 +150,15 @@ const PokemonDetail = () => {
           </div>
           <div className="mt-4">
             {activeTab === "INFO" && (
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-right font-bold">
+              <div className="flex gap-4">
+                <div className="font-bold text-gray-700">
                   <p>No.</p>
                   <p>Name</p>
                   <p>Type</p>
                   <p>Abilities</p>
                 </div>
                 <div className="text-left">
-                  <p>{data?.id}</p>
+                  <p>{data ? formatNumber(data.id) : ""}</p>
                   <p>{data?.name.toUpperCase()}</p>
                   <p>{data?.types.map((type) => type.type.name).join(", ")}</p>
                   <p>

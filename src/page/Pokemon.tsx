@@ -24,6 +24,7 @@ function Pokemon() {
           alt=""
         />
       </nav>
+      <div></div>
       <div className="container mx-auto">
         <PokemonList />
       </div>

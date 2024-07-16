@@ -1,6 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 type Pokemon = {
+  types: any;
   name: string;
   url: string;
 };
@@ -43,13 +44,20 @@ type PokemonQuery = {
   offset: number;
   limit: number;
 };
+type PokemonType = {
+  name: string;
+  url: string;
+};
 
+type PokemonTypesResponse = {
+  results: PokemonType[];
+};
 export const pokemonApi = createApi({
   reducerPath: "pokemonApi",
   baseQuery: fetchBaseQuery({ baseUrl: "https://pokeapi.co/api/v2/" }),
   endpoints: (builder) => ({
     getPokemon: builder.query<PokemonResponse, void>({
-      query: () => `pokemon?limit=20`,
+      query: () => "pokemon?limit=151", // Adjust limit as needed
     }),
     getPokemonById: builder.query<PokemonResponse, PokemonQuery>({
       query: (params) => {
@@ -67,11 +75,14 @@ export const pokemonApi = createApi({
     getPokemonDetails: builder.query<PokemonDetails, string>({
       query: (name) => `pokemon/${name}`,
     }),
+    getPokemonTypes: builder.query<PokemonTypesResponse, void>({
+      query: () => "type",
+    }),
   }),
 });
 
 export const {
   useGetPokemonQuery,
-  useGetPokemonByIdQuery,
   useGetPokemonDetailsQuery,
+  useGetPokemonTypesQuery,
 } = pokemonApi;
