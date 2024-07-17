@@ -9,6 +9,8 @@ import {
 import { getTypeColor } from "../components/utils"; // นำเข้าฟังก์ชัน getTypeColor
 import { MdNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
+import PokemonDetailSkeleton from "../components/PokemonDetailSkeleton";
+import PokemonFailedSkeleton from "../components/PokemonFailedSkeleton";
 
 const PokemonDetail = () => {
   const [activeTab, setActiveTab] = useState("INFO");
@@ -59,8 +61,8 @@ const PokemonDetail = () => {
     }
   };
 
-  if (isLoading) return <p>Loading details...</p>;
-  if (error) return <p>Failed to fetch details</p>;
+  if (isLoading) return <PokemonDetailSkeleton />;
+  if (error) return <PokemonFailedSkeleton />;
 
   const backgroundColor = getTypeColor(data?.types[0]?.type?.name ?? "unknown");
 

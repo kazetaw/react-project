@@ -12,6 +12,8 @@ import { TbShoe } from "react-icons/tb";
 import { AiOutlineFire } from "react-icons/ai";
 import SkeletonCard from "./SkeletonCard";
 import { getTypeColor } from "./utils";
+import { MdNavigateNext } from "react-icons/md";
+import { GrFormPrevious } from "react-icons/gr";
 
 const getStatIcon = (statName: string) => {
   switch (statName.toLowerCase()) {
@@ -39,8 +41,13 @@ const PokemonDetails: React.FC<{ name: string }> = ({ name }) => {
   if (error) return <p>Failed to fetch details</p>;
 
   return (
-    <div className="px-6 py-4 text-center justify-center items-center border border-gray-200 shadow-md rounded-lg m-4">
-      <img src={data?.sprites.other.home.front_default} alt={data?.name} />
+    <div className="px-6 py-4 text-center justify-center items-center border border-gray-200 shadow-md rounded-lg m-4 flex flex-col">
+      <img
+        className="mx-auto"
+        style={{ width: 150 }}
+        src={data?.sprites.other.home.front_default}
+        alt={data?.name}
+      />
       <div className="font-bold text-sm text-gray-700 mb-2">
         {data?.name.toUpperCase()}
       </div>
@@ -77,7 +84,18 @@ const PokemonList: React.FC = () => {
   const { data: typesData } = useGetPokemonTypesQuery();
   const [selectedType, setSelectedType] = useState<string | null>(null);
   const [pokemonDetails, setPokemonDetails] = useState<Record<string, any>>({});
+  const [startIndex, setStartIndex] = useState(0);
+  const itemsPerPage = 5; // จำนวนปุ่มที่แสดงต่อหน้า
 
+  const handlePrevious = () => {
+    setStartIndex(Math.max(0, startIndex - 1));
+  };
+
+  const handleNext = () => {
+    setStartIndex(
+      Math.min(startIndex + 1, (typesData?.results.length || 0) - itemsPerPage)
+    );
+  };
   useEffect(() => {
     if (pokemonData) {
       const fetchDetails = async () => {
@@ -106,34 +124,55 @@ const PokemonList: React.FC = () => {
 
   return (
     <>
-      <div className="flex flex-wrap justify-center gap-10">
+      <div className="flex items-center justify-between gap-2 p-2">
         <button
-          onClick={() => setSelectedType(null)}
-          className={`m-2 p-2 rounded ${
-            selectedType === null ? "bg-blue-500 text-white" : "bg-gray-200"
-          }`}
+          onClick={handlePrevious}
+          disabled={startIndex === 0}
+          className="px-3 py-1 bg-gray-200 rounded-md disabled:opacity-50"
         >
-          All
+          <GrFormPrevious size={24} />
         </button>
-        {typesData?.results.map((type) => (
+        <div className="flex gap-2 overflow-hidden">
           <button
-            key={type.name}
-            onClick={() => setSelectedType(type.name)}
-            className={`m-2 p-2 rounded ${
-              selectedType === type.name
-                ? "bg-blue-500 text-white"
-                : "bg-gray-200"
+            onClick={() => setSelectedType(null)}
+            className={`flex-shrink-0 px-7 py-2 rounded-3xl ${
+              selectedType === null ? "bg-blue-500 text-white" : "bg-gray-200"
             }`}
           >
-            {type.name}
+            All
           </button>
-        ))}
+          {typesData?.results
+            .slice(startIndex, startIndex + itemsPerPage)
+            .map((type) => (
+              <button
+                key={type.name}
+                onClick={() => setSelectedType(type.name)}
+                className={`flex-shrink-0 px-7 py-2 rounded-3xl ${
+                  selectedType === type.name
+                    ? "bg-blue-500 text-white"
+                    : "bg-gray-200"
+                }`}
+              >
+                {type.name}
+              </button>
+            ))}
+        </div>
+        <button
+          onClick={handleNext}
+          disabled={
+            startIndex >= (typesData?.results.length || 0) - itemsPerPage
+          }
+          className="px-3 py-1 bg-gray-200 rounded-md disabled:opacity-50"
+        >
+          <MdNavigateNext size={24} />
+        </button>
       </div>
+
       <div className="flex flex-wrap justify-center gap-10">
         {filteredPokemon.map((details: any) => (
           <div
             key={details.name}
-            className="w-1/2 sm:w-1/4 md:w-1/6 p-2 flex justify-center"
+            className="w-1/2 sm:w-1/4 md:w-1/5 p-2 flex justify-center"
           >
             <Link to={`/pokemon/${details.name}`}>
               <PokemonDetails name={details.name} />
