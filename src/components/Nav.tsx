@@ -83,12 +83,12 @@ const Nav = () => {
           }}
         >
           <img
-            src="https://static-00.iconduck.com/assets.00/slow-motion-video-icon-512x511-arswqh3e.png"
+            src="\src\assets\icon\blackicon.png"
             alt="Flowbite Logo"
             style={{ height: 32, marginRight: 8 }}
           />
           <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-            MyLogo
+            UikazE
           </Typography>
         </Box>
         {isMobile ? (
@@ -122,17 +122,24 @@ const Nav = () => {
               to="/landingpage"
               sx={getButtonStyle("/landingpage")}
             >
-              Landing Page
+              Home
             </Button>
             <Button component={Link} to="/count" sx={getButtonStyle("/count")}>
-              Count
+              Projects
             </Button>
             <Button
               component={Link}
               to="/pokemon"
               sx={getButtonStyle("/pokemon")}
             >
-              Pokemon
+              Blog
+            </Button>
+            <Button
+              component={Link}
+              to="/pokemon"
+              sx={getButtonStyle("/pokemon")}
+            >
+              Contact us
             </Button>
           </Box>
         )}

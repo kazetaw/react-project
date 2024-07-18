@@ -12,9 +12,9 @@ import Ex_antd from "./page/Ex_antd";
 import ShoppingCart from "./page/ShoppingCart";
 import { store } from "./store/store";
 import { Provider } from "react-redux";
-import { Redux } from "./page/Redux";
 import Pokemon from "./page/Pokemon";
 import PokemonDetail from "./page/PokemonDetail";
+import Redux from "./page/Redux";
 const MainLayout = () => (
   <>
     <Nav />
