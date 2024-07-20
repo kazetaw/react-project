@@ -27,20 +27,16 @@ const Router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "home",
-        element: <Home />,
-      },
-      {
         path: "todo",
         element: <Todo />,
       },
       {
         path: "word",
         element: <CheckList />,
+      },
+      {
+        path: "count",
+        element: <Redux />,
       },
       {
         path: "card",
@@ -54,19 +50,11 @@ const Router = createBrowserRouter([
         path: "shopping_cart",
         element: <ShoppingCart />,
       },
-      {
-        path: "*",
-        element: <Home />,
-      },
     ],
   },
   {
     path: "landingpage",
     element: <Landingpage />,
-  },
-  {
-    path: "count",
-    element: <Redux />,
   },
   {
     path: "pokemon",
@@ -75,6 +63,18 @@ const Router = createBrowserRouter([
   {
     path: "pokemon/:name",
     element: <PokemonDetail />,
+  },
+  {
+    path: "*",
+    element: <Home />,
+  },
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "home",
+    element: <Home />,
   },
 ]);
 

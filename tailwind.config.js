@@ -10,6 +10,9 @@ export default {
           300: "#fffc",
         },
       },
+      fontFamily: {
+        noto: ['"Noto Sans"', "sans-serif"],
+      },
     },
     screens: {
       xs: { min: "365px" },

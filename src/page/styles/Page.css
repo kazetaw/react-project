@@ -7,19 +7,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg, #d0e, #91f);
   }
   
-  svg {
+ #hero svg {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
   }
   
-  path {
+.text-u path {
     stroke-width: 10px;
     stroke-linecap: round;
     fill: transparent;
+    
   }
-  
+ /* path {
+    stroke-linecap: round;
+  } */
+.item {
+    overflow: visible;
+    stroke: #000000;
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
