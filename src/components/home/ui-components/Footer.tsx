@@ -31,19 +31,34 @@ function Footer() {
             Email: info@example.com
           </div>
           <div className="flex space-x-4 mt-4">
-            <a href="#" className="text-gray-600 hover:text-blue-500">
+            <a
+              href="https://x.com/ttwtcr?s=1"
+              className="text-gray-600 hover:text-blue-500"
+            >
               <FaTwitter className="w-6 h-6" />
             </a>
-            <a href="#" className="text-gray-600 hover:text-blue-600">
+            <a
+              href="https://x.com/ttwtcr?s=1"
+              className="text-gray-600 hover:text-blue-600"
+            >
               <FaFacebookF className="w-6 h-6" />
             </a>
-            <a href="#" className="text-gray-600 hover:text-pink-500">
+            <a
+              href="https://www.instagram.com/ttsuxz_?igsh=dnYyaXFkYTd6bnFz&utm_source=qr"
+              className="text-gray-600 hover:text-pink-500"
+            >
               <FaInstagram className="w-6 h-6" />
             </a>
-            <a href="#" className="text-gray-600 hover:text-blue-700">
+            <a
+              href="https://www.linkedin.com/in/ttsuxz-kaseq-694b73312/"
+              className="text-gray-600 hover:text-blue-700"
+            >
               <FaLinkedinIn className="w-6 h-6" />
             </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800">
+            <a
+              href="https://github.com/kazetaw"
+              className="text-gray-600 hover:text-gray-800"
+            >
               <FaGithub className="w-6 h-6" />
             </a>
           </div>

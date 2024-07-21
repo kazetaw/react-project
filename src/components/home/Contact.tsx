@@ -6,7 +6,6 @@ function Contact() {
     <>
       {" "}
       <section id="contact" className="contact section py-12 bg-gray-50">
-        {/* Section Title */}
         <div className="container mx-auto text-center mb-12" data-aos="fade-up">
           <h2 className="text-3xl font-bold">Contact</h2>
           <p className="text-gray-600 mt-2">
@@ -14,7 +13,6 @@ function Contact() {
             consectetur velit
           </p>
         </div>
-        {/* End Section Title */}
 
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center gap-8">
