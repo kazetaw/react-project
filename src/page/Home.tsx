@@ -1,7 +1,7 @@
 // import React from "react";
 // import { Link } from "react-router-dom";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import Footer from "../components/home/ui-components/Footer";
 import { Contact } from "../components/Contact";
 import Navbar from "../components/home/Navbar";

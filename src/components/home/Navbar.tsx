@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { useNavigate } from "react-router-dom";
+import Button3D from "./ui-components/Button3D";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

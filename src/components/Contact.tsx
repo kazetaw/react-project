@@ -204,9 +204,15 @@ export const Contact = () => {
                 <div className="text-center">
                   <button
                     type="submit"
-                    className={`px-4 py-2 rounded-md text-white ${
-                      loading ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-700"
-                    } transition`}
+                    className={`px-5 py-2.5 rounded-lg text-sm font-medium text-white text-center
+    ${
+      loading
+        ? "bg-gray-400"
+        : "bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br"
+    }
+    focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800
+    shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80
+    transition`}
                     disabled={loading}
                   >
                     {loading ? "Sending..." : "Send Email"}

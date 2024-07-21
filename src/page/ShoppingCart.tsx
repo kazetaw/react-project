@@ -187,7 +187,9 @@ const ShoppingCart: React.FC = () => {
 
   return (
     <div className="p-5">
-      <Cart cart={cart} removeItem={removeItem} addItem={addItem} />
+      <div className="mt-24">
+        <Cart cart={cart} removeItem={removeItem} addItem={addItem} />
+      </div>
       <h1 className="text-2xl font-bold mb-4">สินค้าทั้งหมด</h1>
       <CategoryList />
       <ProductList products={products} addItem={addItem} />

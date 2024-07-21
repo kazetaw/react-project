@@ -44,6 +44,8 @@ function Project() {
       className="features-details section py-10 bg-gray-100"
     >
       <div className="container mx-auto">
+        <h1 className="text-gray-500 mb-10">RECENT WORK</h1>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-between items-center features-item">
           <AnimatedSection
             refProp={refs[0]}
