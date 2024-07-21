@@ -74,19 +74,20 @@ function Project() {
             className="col-span-1 flex items-center"
           >
             <div className="content p-5">
-              <h3 className="text-2xl font-bold">Pokemon</h3>
+              <h3 className="text-2xl font-bold">Pokemon Project</h3>
               <p className="mt-4 text-lg">
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident.
+                Utilized Redux for fetching API data to feature character types
+                and display detailed information. Implemented efficient state
+                management to handle complex data fetching and state
+                transitions. Enhanced user experience with smooth animations and
+                interactive UI components
               </p>
-              <a
-                href="#"
+              <Link
+                to="pokemon"
                 className="btn more-btn mt-4 text-blue-500 hover:text-blue-700"
               >
-                Learn More
-              </a>
+                Preview
+              </Link>
             </div>
           </AnimatedSection>
         </div>
@@ -101,33 +102,21 @@ function Project() {
             className="col-span-1 order-2 lg:order-1 flex items-center"
           >
             <div className="content p-5">
-              <h3 className="text-2xl font-bold">
-                Neque ipsum omnis sapiente quod quia dicta
-              </h3>
+              <h3 className="text-2xl font-bold">Sign-In Project</h3>
               <p className="mt-4 text-lg">
-                Quidem qui dolore incidunt aut. In assumenda harum id iusto
-                lorena plasico mares
+                Leveraged Ant Design for creating a user-friendly sign-in
+                interface and validating user inputs. Implemented robust form
+                validation and error handling to enhance security and user
+                experience. Applied consistent design principles to ensure a
+                cohesive look and feel across the application.
               </p>
-              <ul className="mt-4 space-y-2">
-                <li className="flex items-center">
-                  <i className="bi bi-easel flex-shrink-0 mr-2"></i> Et corporis
-                  ea eveniet ducimus.
-                </li>
-                <li className="flex items-center">
-                  <i className="bi bi-patch-check flex-shrink-0 mr-2"></i>{" "}
-                  Exercitationem dolorem sapiente.
-                </li>
-                <li className="flex items-center">
-                  <i className="bi bi-brightness-high flex-shrink-0 mr-2"></i>{" "}
-                  Veniam quia modi magnam.
-                </li>
-              </ul>
-              <a
-                href="#"
+
+              <Link
+                to="antd"
                 className="btn more-btn mt-4 text-blue-500 hover:text-blue-700"
               >
-                Learn More
-              </a>
+                Preview
+              </Link>
             </div>
           </AnimatedSection>
           <AnimatedSection
@@ -183,21 +172,20 @@ function Project() {
             className="col-span-1 flex items-center"
           >
             <div className="content p-5">
-              <h3 className="text-2xl font-bold">
-                Corporis temporibus maiores provident
-              </h3>
+              <h3 className="text-2xl font-bold">Landing Page Project</h3>
               <p className="mt-4 text-lg">
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident.
+                Employed Tailwind CSS for layout design and successfully cloned
+                a professional design template. Focused on responsive design to
+                ensure compatibility across various devices and screen sizes.
+                Optimized the code for maintainability and scalability, adhering
+                to best practices in CSS.{" "}
               </p>
-              <a
-                href="#"
+              <Link
+                to="landingpage"
                 className="btn more-btn mt-4 text-blue-500 hover:text-blue-700"
               >
-                Learn More
-              </a>
+                Preview
+              </Link>
             </div>
           </AnimatedSection>
         </div>
