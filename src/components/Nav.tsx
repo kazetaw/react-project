@@ -35,7 +35,7 @@ const Nav = () => {
 
         <nav className="hidden md:flex space-x-4">
           <a
-            href="index.html#hero"
+            href="index.html#home"
             className={`py-2 px-4 rounded ${getButtonStyle("/landingpage")}`}
           >
             Home
@@ -95,7 +95,7 @@ const Nav = () => {
               </button>
               <nav>
                 <a
-                  href="index.html#hero"
+                  href="index.html#home"
                   className={`block px-4 py-2 ${getButtonStyle(
                     "/landingpage"
                   )}`}

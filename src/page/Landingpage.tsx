@@ -162,7 +162,6 @@ export const Landingpage = () => {
             </div>
           </div>
         </div>
-
         <br />
         <div className="flex justify-center items-center space-x-4 text-gray-600">
           <div className="flex items-center space-x-2 bg-white rounded-full px-4 py-2 shadow">
@@ -321,278 +320,281 @@ export const Landingpage = () => {
           </div>
           <br />
           <br />
-          <div className="flex-col items-center justify-center text-center">
-            <h2 className="text-3xl font-bold">
-              Journey To The Skies Made Simple
-            </h2>
-            <br />
+          <div className="container mx-auto">
+            <div className="flex-col items-center justify-center text-center">
+              <h2 className="text-3xl font-bold">
+                Journey To The Skies Made Simple
+              </h2>
+              <br />
 
-            <p>
-              Travelling Is A Wonderful Way To Explore New Place, Learn About
-            </p>
-            <p>Different Culture, And Gain Unique Experiences.</p>
+              <p>
+                Travelling Is A Wonderful Way To Explore New Place, Learn About
+              </p>
+              <p>Different Culture, And Gain Unique Experiences.</p>
+            </div>
           </div>
         </div>
         <br />
+        <div className="container mx-auto">
+          <div className="flex justify-center items-center">
+            <div className="flex-none h-40 max-w-sm p-6 bg-gray-100 rounded-lg shadow dark:bg-gray-800 mt-48">
+              <a href="#">
+                <button
+                  type="button"
+                  className="bg-white text-blue-400 border border-white hover:bg-white hover:text-white focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-full text-sm p-2 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="size-6"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
 
-        <div className="flex justify-center items-center">
-          <div className="flex-none h-40 max-w-sm p-6 bg-gray-100 rounded-lg shadow dark:bg-gray-800 mt-48">
-            <a href="#">
+                  <span className="sr-only">Icon description</span>
+                </button>
+                <br />
+                <br />
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Find Your
+                </h5>
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Destination
+                </h5>
+              </a>
+            </div>
+            <div className="flex-1 max-w-sm p-11 bg-blue-500 border border-gray-200 rounded-t-3xl shadow dark:bg-gray-800 dark:border-gray-700">
               <button
                 type="button"
-                className="bg-white text-blue-400 border border-white hover:bg-white hover:text-white focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-full text-sm p-2 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
+                className="bg text-white border border-blue-200 hover:bg-white hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   className="size-6"
+                >
+                  <path d="M11.25 4.533A9.707 9.707 0 0 0 6 3a9.735 9.735 0 0 0-3.25.555.75.75 0 0 0-.5.707v14.25a.75.75 0 0 0 1 .707A8.237 8.237 0 0 1 6 18.75c1.995 0 3.823.707 5.25 1.886V4.533ZM12.75 20.636A8.214 8.214 0 0 1 18 18.75c.966 0 1.89.166 2.75.47a.75.75 0 0 0 1-.708V4.262a.75.75 0 0 0-.5-.707A9.735 9.735 0 0 0 18 3a9.707 9.707 0 0 0-5.25 1.533v16.103Z" />
+                </svg>
+
+                <span className="sr-only">Icon description</span>
+              </button>
+              <br />
+              <br />
+              <a href="#">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">
+                  Book
+                </h5>
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">
+                  A Ticket
+                </h5>
+              </a>
+              <p className="mb-3 font-normal text-gray-100 dark:text-gray-400">
+                Travelling Is A Wonderful Way To Explore New Places, Learn About
+                Different Cultures, And Gain Unique Experiences.
+              </p>
+              <a
+                href="#"
+                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                LEARN MORE
+                <svg
+                  className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 10"
                 >
                   <path
-                    fill-rule="evenodd"
-                    d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
-                    clip-rule="evenodd"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"
                   />
                 </svg>
+              </a>
+            </div>
+            <div className="flex-none h-40 max-w-sm p-6 bg-gray-100 rounded-3xl shadow dark:bg-gray-800 mt-48">
+              <a href="#">
+                <button
+                  type="button"
+                  className="bg-white text-blue-400 border border-white hover:bg-white hover:text-white focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-full text-sm p-2 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="size-6"
+                  >
+                    <path d="M2.273 5.625A4.483 4.483 0 0 1 5.25 4.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0 0 18.75 3H5.25a3 3 0 0 0-2.977 2.625ZM2.273 8.625A4.483 4.483 0 0 1 5.25 7.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0 0 18.75 6H5.25a3 3 0 0 0-2.977 2.625ZM5.25 9a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h13.5a3 3 0 0 0 3-3v-6a3 3 0 0 0-3-3H15a.75.75 0 0 0-.75.75 2.25 2.25 0 0 1-4.5 0A.75.75 0 0 0 9 9H5.25Z" />
+                  </svg>
 
-                <span className="sr-only">Icon description</span>
-              </button>
-              <br />
-              <br />
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Find Your
-              </h5>
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Destination
-              </h5>
-            </a>
+                  <span className="sr-only">Icon description</span>
+                </button>
+                <br />
+                <br />
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Pay &
+                </h5>
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Start Journey
+                </h5>
+              </a>
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
+            </div>
           </div>
-          <div className="flex-1 max-w-sm p-11 bg-blue-500 border border-gray-200 rounded-t-3xl shadow dark:bg-gray-800 dark:border-gray-700">
-            <button
-              type="button"
-              className="bg text-white border border-blue-200 hover:bg-white hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="size-6"
-              >
-                <path d="M11.25 4.533A9.707 9.707 0 0 0 6 3a9.735 9.735 0 0 0-3.25.555.75.75 0 0 0-.5.707v14.25a.75.75 0 0 0 1 .707A8.237 8.237 0 0 1 6 18.75c1.995 0 3.823.707 5.25 1.886V4.533ZM12.75 20.636A8.214 8.214 0 0 1 18 18.75c.966 0 1.89.166 2.75.47a.75.75 0 0 0 1-.708V4.262a.75.75 0 0 0-.5-.707A9.735 9.735 0 0 0 18 3a9.707 9.707 0 0 0-5.25 1.533v16.103Z" />
-              </svg>
-
-              <span className="sr-only">Icon description</span>
-            </button>
-            <br />
-            <br />
-            <a href="#">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">
-                Book
-              </h5>
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">
-                A Ticket
-              </h5>
-            </a>
-            <p className="mb-3 font-normal text-gray-100 dark:text-gray-400">
-              Travelling Is A Wonderful Way To Explore New Places, Learn About
-              Different Cultures, And Gain Unique Experiences.
-            </p>
-            <a
-              href="#"
-              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              LEARN MORE
-              <svg
-                className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
+        </div>
+        <br />
+        <div className="container mx-auto">
+          <div className="grid grid-cols-3 gap-4 mt-20">
+            <div className="flex flex-col col-span-1">
+              <div className="ml-20 max-w-[395px] max-h-[500px]">
+                <img
+                  className="rounded-3xl w-full h-full object-cover"
+                  src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSyfAW3NU2KJ9tBfn7upYFuwZykKZovXEzQQyOm_Zi9VwHFRvGr"
+                  alt="Child playing in water"
                 />
-              </svg>
-            </a>
+              </div>
+            </div>
+            <div className="flex flex-col col-span-2 items-center ml-3">
+              <div className="grid grid-cols-2 gap-4 mt-24">
+                <div className="text-7xl whitespace-nowrap">UNLEASH</div>
+                <div className="text-xs text-gray-900 whitespace-nowrap mt-3">
+                  <p className="">
+                    Travelling Is A Wonderful Way To Explore New Place,{" "}
+                  </p>
+                  <p>Learn About Different Culture</p>
+                </div>
+              </div>
+              <div className="text-7xl text-start whitespace-nowrap">
+                WANDERLUST WITH
+              </div>
+              <div className="grid grid-cols-2 gap-4 items-center">
+                <div className="text-xs text-gray-900 ml-2 whitespace-nowrap">
+                  <p>Travelling Is A Wonderful Way To Explore</p>
+                  <p>New Place, Learn About Different Culture</p>
+                </div>
+                <div className="ml-2 text-6xl text-gray-900 whitespace-nowrap mt-3">
+                  <p className="">SKYWINGS </p>
+                </div>{" "}
+              </div>
+              <br />
+            </div>
           </div>
-          <div className="flex-none h-40 max-w-sm p-6 bg-gray-100 rounded-3xl shadow dark:bg-gray-800 mt-48">
-            <a href="#">
+        </div>{" "}
+        <div className="container mx-auto">
+          <div className="grid grid-cols-3 gap-4 items-start justify-start text-left">
+            <div className="">
               <button
                 type="button"
-                className="bg-white text-blue-400 border border-white hover:bg-white hover:text-white focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-full text-sm p-2 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
+                className="grid grid-cols-3 text-white bg-gray-100  focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-50 py-3 text-center items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
+                <span className="text-end mr-5 col-span-2 text-2xl text-blue-600">
+                  20% OFF
+                </span>
+                <p className="text-xs text-gray-600 text-left">
+                  Till 28 September,2023
+                </p>
+              </button>
+            </div>
+            <div className="col-span-2 justify-end items-end text-end">
+              <button
+                type="button"
+                className=" ml-20 text-gray-900 bg-gray-300 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-40 py-3 inline-flex  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                style={{
+                  backgroundImage:
+                    "url(https://c.pxhere.com/photos/63/ba/sky_background_nature_blue_clouds_blue_sky_climate_clear-639846.jpg!s2)",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <h1 className="text-3xl text-gray-900">Book A Flight Now</h1>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
                   viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="size-6"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-6 h-6 ml-2"
                 >
-                  <path d="M2.273 5.625A4.483 4.483 0 0 1 5.25 4.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0 0 18.75 3H5.25a3 3 0 0 0-2.977 2.625ZM2.273 8.625A4.483 4.483 0 0 1 5.25 7.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0 0 18.75 6H5.25a3 3 0 0 0-2.977 2.625ZM5.25 9a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h13.5a3 3 0 0 0 3-3v-6a3 3 0 0 0-3-3H15a.75.75 0 0 0-.75.75 2.25 2.25 0 0 1-4.5 0A.75.75 0 0 0 9 9H5.25Z" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
                 </svg>
-
-                <span className="sr-only">Icon description</span>
               </button>
-              <br />
-              <br />
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Pay &
-              </h5>
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Start Journey
-              </h5>
-            </a>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
+            </div>
           </div>
         </div>
         <br />
-
-        <div className="grid grid-cols-3 gap-4 mt-20">
-          <div className="flex flex-col col-span-1">
-            <div className="ml-20 max-w-[395px] max-h-[500px]">
-              <img
-                className="rounded-3xl w-full h-full object-cover"
-                src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSyfAW3NU2KJ9tBfn7upYFuwZykKZovXEzQQyOm_Zi9VwHFRvGr"
-                alt="Child playing in water"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col col-span-2 items-start ml-3">
-            <div className="grid grid-cols-2 gap-4 mt-24">
-              <div className="text-7xl whitespace-nowrap">UNLEASH</div>
-              <div className="text-xs text-gray-900 whitespace-nowrap mt-3">
-                <p className="">
-                  Travelling Is A Wonderful Way To Explore New Place,{" "}
-                </p>
-                <p>Learn About Different Culture</p>
-              </div>
-            </div>
-            <div className="text-7xl text-start whitespace-nowrap">
-              WANDERLUST WITH
-            </div>
-            <div className="grid grid-cols-2 gap-4 items-center">
-              <div className="text-xs text-gray-900 ml-2 whitespace-nowrap">
-                <p>Travelling Is A Wonderful Way To Explore</p>
-                <p>New Place, Learn About Different Culture</p>
-              </div>
-              <div className="ml-2 text-6xl text-gray-900 whitespace-nowrap mt-3">
-                <p className="">SKYWINGS </p>
-              </div>{" "}
-            </div>
-            <br />
-          </div>
-        </div>
-        <div className="grid grid-cols-3 gap-4 items-center">
-          <div>
-            <button
-              type="button"
-              className="ml-20 text-white bg-gray-100 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-20 py-3 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              <div className="grid grid-cols-2 mt-2">
-                <div>
-                  <h1 className="text-3xl text-blue-600">20% OFF</h1>
-                </div>
-                <div className="text-start ml-3 mt-1">
-                  <p className="text-xs text-gray-600">Till 28 September,</p>
-                  <p className="text-xs text-gray-600">2023</p>
-                </div>
-              </div>
-            </button>
-          </div>
-          <div className="col-span-2">
-            <button
-              type="button"
-              className="ml-20 text-gray-900 bg-gray-300 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-60 py-3 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              style={{
-                backgroundImage:
-                  "url(https://c.pxhere.com/photos/63/ba/sky_background_nature_blue_clouds_blue_sky_climate_clear-639846.jpg!s2)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <h1 className="text-3xl text-gray-900">Book A Flight Now</h1>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-6 h-6 ml-2"
+        <div className="container mx-auto">
+          <div className="grid grid-cols-2 gap-4 mt-20">
+            <div className="px-16 ml-10">
+              <button
+                type="button"
+                className="text-gray-900 bg-gray-100 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
+                ABOUT US
+              </button>
+            </div>
+            <div>
+              <p className="font-bold text-xs text-gray-900">
+                Travelling Is A Wonderful Way To Explore New Place, Learn About
+              </p>
+              <p className="font-bold text-xs text-gray-900">
+                Different Culture, And Gain Unique Experiences. Travelling Is A
+              </p>
+              <p className="font-bold text-xs text-gray-900">
+                Wonderful Way To Explore New Place, Learn About{" "}
+              </p>
+              <br />
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex flex-row">
+                  {" "}
+                  <hr
+                    style={{
+                      borderLeft: "3px solid #3333CC",
+                      height: "70px",
+                      width: "0",
+                      margin: "0",
+                    }}
+                    className="solid-vertical"
+                  />
+                  <p className="ml-2 text-xs text-gray-600 inline-text">
+                    Travelling Is A Wonderful Way To Explore New Place, Learn
+                    About Different Culture, And Gain Unique Experiences.
+                  </p>
+                </div>
 
-        <br />
-        <div className="grid grid-cols-2 gap-4 mt-20">
-          <div className="px-16 ml-10">
-            <button
-              type="button"
-              className="text-gray-900 bg-gray-100 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
-            >
-              ABOUT US
-            </button>
-          </div>
-          <div>
-            <p className="font-bold text-xs text-gray-900">
-              Travelling Is A Wonderful Way To Explore New Place, Learn About
-            </p>
-            <p className="font-bold text-xs text-gray-900">
-              Different Culture, And Gain Unique Experiences. Travelling Is A
-            </p>
-            <p className="font-bold text-xs text-gray-900">
-              Wonderful Way To Explore New Place, Learn About{" "}
-            </p>
-            <br />
-            <div className="grid grid-cols-2 gap-4">
-              <div className="flex flex-row">
-                {" "}
-                <hr
-                  style={{
-                    borderLeft: "3px solid #3333CC",
-                    height: "70px",
-                    width: "0",
-                    margin: "0",
-                  }}
-                  className="solid-vertical"
-                />
-                <p className="ml-2 text-xs text-gray-600 inline-text">
-                  Travelling Is A Wonderful Way To Explore New Place, Learn
-                  About Different Culture, And Gain Unique Experiences.
-                </p>
+                <div className="flex flex-row ...">
+                  {" "}
+                  <hr
+                    style={{
+                      borderLeft: "3px solid #3333CC",
+                      height: "70px",
+                      width: "0",
+                      margin: "0",
+                    }}
+                    className="solid-vertical"
+                  />
+                  <p className="ml-2 text-xs text-gray-600 inline-text">
+                    Travelling Is A Wonderful Way To Explore New Place, About
+                    Different Culture, And Gain Unique Experiences.
+                  </p>
+                </div>
               </div>
-
-              <div className="flex flex-row ...">
-                {" "}
-                <hr
-                  style={{
-                    borderLeft: "3px solid #3333CC",
-                    height: "70px",
-                    width: "0",
-                    margin: "0",
-                  }}
-                  className="solid-vertical"
-                />
-                <p className="ml-2 text-xs text-gray-600 inline-text">
-                  Travelling Is A Wonderful Way To Explore New Place, About
-                  Different Culture, And Gain Unique Experiences.
-                </p>
-              </div>
+              <div></div>
             </div>
             <div></div>
           </div>
-          <div></div>
         </div>
-
         <div className="flex justify-center space-x-5 mt-14">
           <div className="flex justify-center items-center w-full max-w-sm bg-gray-100 rounded-3xl">
             <div className="flex flex-col items-center pb-10">
@@ -753,279 +755,281 @@ export const Landingpage = () => {
             </div>
           </div>
         </div>
+        <div className="container mx-auto">
+          <h1 className="font-bold text-3xl text-center mt-20">
+            Loved By Over Thousand Travelers
+          </h1>
+          <br />
+          <div className="grid grid-cols-3 gap-4 justify-items-center items-center">
+            <div className="max-w-sm p-1 bg-gray-100  border-gray-200 rounded-3xl shadow dark:bg-gray-800 dark:border-gray-700">
+              <div className="max-w-sm p-6 bg-white  border-gray-200 rounded-3xl ">
+                <div className="flex items-center">
+                  <svg
+                    className="w-4 h-4 text-blue-500 ms-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                  <svg
+                    className="w-4 h-4 text-blue-500 ms-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                  <svg
+                    className="w-4 h-4 text-blue-500 ms-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                  <svg
+                    className="w-4 h-4 text-blue-500 ms-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                  <svg
+                    className="w-4 h-4 text-blue-500 ms-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                  <br />
+                  <br />
+                </div>
 
-        <h1 className="font-bold text-3xl text-center mt-20">
-          Loved By Over Thousand Travelers
-        </h1>
-        <br />
-
-        <div className="grid grid-cols-3 gap-4 justify-items-center items-center">
-          <div className="max-w-sm p-1 bg-gray-100  border-gray-200 rounded-3xl shadow dark:bg-gray-800 dark:border-gray-700">
-            <div className="max-w-sm p-6 bg-white  border-gray-200 rounded-3xl ">
+                <span>
+                  "I Just Returned From The Most Amazing Trip To Europe, All
+                  Thanks To This Travel Agency! From The Moment I Contacted
+                  Them, They Were Incredibly Helpful And Made Sure To Create An
+                  Itinerary That Suited My Interests And Budget. I Can't Wait To
+                  Book My Next Adventure With Them!"
+                </span>
+              </div>
               <div className="flex items-center">
-                <svg
-                  className="w-4 h-4 text-blue-500 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-blue-500 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-blue-500 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-blue-500 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-blue-500 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <br />
-                <br />
+                <div className="ml-6 pt-2 flex-shrink-0">
+                  <img
+                    className="w-12 h-12 rounded-full object-cover mr-4"
+                    src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWFufGVufDB8fDB8fHww"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h1 className="font-bold">Arefin Shuvo</h1>
+                  <span className="text-sm text-gray-500">
+                    Product Designer
+                  </span>
+                </div>
               </div>
-
-              <span>
-                "I Just Returned From The Most Amazing Trip To Europe, All
-                Thanks To This Travel Agency! From The Moment I Contacted Them,
-                They Were Incredibly Helpful And Made Sure To Create An
-                Itinerary That Suited My Interests And Budget. I Can't Wait To
-                Book My Next Adventure With Them!"
-              </span>
             </div>
-            <div className="flex items-center">
-              <div className="ml-6 pt-2 flex-shrink-0">
-                <img
-                  className="w-12 h-12 rounded-full object-cover mr-4"
-                  src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWFufGVufDB8fDB8fHww"
-                  alt=""
-                />
+            <div className="max-w-sm p-1 bg-blue-500  border-gray-200 rounded-3xl shadow dark:bg-gray-800 dark:border-gray-700">
+              <div className="max-w-sm p-6 bg-white  border-gray-200 rounded-3xl ">
+                <div className="flex items-center">
+                  <svg
+                    className="w-4 h-4 text-blue-500 ms-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                  <svg
+                    className="w-4 h-4 text-blue-500 ms-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                  <svg
+                    className="w-4 h-4 text-blue-500 ms-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                  <svg
+                    className="w-4 h-4 text-blue-500 ms-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                  <svg
+                    className="w-4 h-4 text-blue-500 ms-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                  <br />
+                  <br />
+                </div>
+
+                <span>
+                  "I Just Returned From The Most Amazing Trip To Europe, All
+                  Thanks To This Travel Agency! From The Moment I Contacted
+                  Them, They Were Incredibly Helpful And Made Sure To Create An
+                  Itinerary That Suited My Interests And Budget. I Can't Wait To
+                  Book My Next Adventure With Them!"
+                </span>
               </div>
-              <div>
-                <h1 className="font-bold">Arefin Shuvo</h1>
-                <span className="text-sm text-gray-500">Product Designer</span>
+              <div className="flex items-center">
+                <div className="ml-6 pt-2 flex-shrink-0">
+                  <img
+                    className="w-12 h-12 rounded-full object-cover mr-4"
+                    src="https://www.allprodad.com/wp-content/uploads/2021/03/05-12-21-happy-people.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h1 className="font-bold text-white">Arefin Shuvo</h1>
+                  <span className="text-sm text-white">Product Designer</span>
+                </div>
+              </div>
+            </div>
+            <div className="max-w-sm p-1 bg-gray-100  border-gray-200 rounded-3xl shadow dark:bg-gray-800 dark:border-gray-700">
+              <div className="max-w-sm p-6 bg-white  border-gray-200 rounded-3xl ">
+                <div className="flex items-center">
+                  <svg
+                    className="w-4 h-4 text-blue-500 ms-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                  <svg
+                    className="w-4 h-4 text-blue-500 ms-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                  <svg
+                    className="w-4 h-4 text-blue-500 ms-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                  <svg
+                    className="w-4 h-4 text-blue-500 ms-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                  <svg
+                    className="w-4 h-4 text-blue-500 ms-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 20"
+                  >
+                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                  </svg>
+                  <br />
+                  <br />
+                </div>
+
+                <span>
+                  "I Just Returned From The Most Amazing Trip To Europe, All
+                  Thanks To This Travel Agency! From The Moment I Contacted
+                  Them, They Were Incredibly Helpful And Made Sure To Create An
+                  Itinerary That Suited My Interests And Budget. I Can't Wait To
+                  Book My Next Adventure With Them!"
+                </span>
+              </div>
+              <div className="flex items-center">
+                <div className="ml-6 pt-2 flex-shrink-0">
+                  <img
+                    className="w-12 h-12 rounded-full object-cover mr-4"
+                    src="https://images.unsplash.com/photo-1595347097560-69238724e7bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG1hbnxlbnwwfHwwfHx8MA%3D%3D"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h1 className="font-bold">Arefin Shuvo</h1>
+                  <span className="text-sm text-gray-500">
+                    Product Designer
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-          <div className="max-w-sm p-1 bg-blue-500  border-gray-200 rounded-3xl shadow dark:bg-gray-800 dark:border-gray-700">
-            <div className="max-w-sm p-6 bg-white  border-gray-200 rounded-3xl ">
-              <div className="flex items-center">
-                <svg
-                  className="w-4 h-4 text-blue-500 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-blue-500 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-blue-500 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-blue-500 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-blue-500 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <br />
-                <br />
-              </div>
-
-              <span>
-                "I Just Returned From The Most Amazing Trip To Europe, All
-                Thanks To This Travel Agency! From The Moment I Contacted Them,
-                They Were Incredibly Helpful And Made Sure To Create An
-                Itinerary That Suited My Interests And Budget. I Can't Wait To
-                Book My Next Adventure With Them!"
-              </span>
+          <br />
+          <div className="flex justify-center space-x-5 mt-20"></div>
+          <br />
+          <div className="grid grid-cols-5 gap-4">
+            <div className="flex flex-col justify-center items-center col-span-1">
+              <img
+                className="w-36 h-36 rounded-full object-cover"
+                src="https://houseoftravelandtours.com/wp-content/uploads/elementor/thumbs/shifaaz-shamoon-qtbV_8P_Ksk-unsplash-q9z45aup4ncx112sk4huiqijlao7lmflwti9nqd1vc.jpg"
+                alt=""
+              />
             </div>
-            <div className="flex items-center">
-              <div className="ml-6 pt-2 flex-shrink-0">
-                <img
-                  className="w-12 h-12 rounded-full object-cover mr-4"
-                  src="https://www.allprodad.com/wp-content/uploads/2021/03/05-12-21-happy-people.jpg"
-                  alt=""
-                />
-              </div>
-              <div>
-                <h1 className="font-bold text-white">Arefin Shuvo</h1>
-                <span className="text-sm text-white">Product Designer</span>
-              </div>
+
+            <div className="flex flex-col justify-center items-center col-span-1">
+              <span className="font-bold text-2xl">Explore The Skies</span>
+              <h1 className="font-bold text-2xl">With Confidence!</h1>
+            </div>
+            <div className="flex flex-col justify-center items-center col-span-1">
+              <img
+                className="w-28 h-28 rounded-full object-cover"
+                src="https://i.pinimg.com/564x/52/51/8b/52518bc0879daa54380b02a5ff0b78f8.jpg"
+                alt=""
+              />
+            </div>
+            <div className="flex flex-col justify-center items-start">
+              <p className="text-sm text-gray-500">
+                Travelling Is A Wonderful Way To Explore New Places, Learn About
+              </p>
+              <p className="text-sm text-gray-500">
+                Different Cultures, And Gain
+              </p>
+            </div>
+            <div className="flex flex-col justify-center items-center col-span-1">
+              <img
+                className="w-36 h-36 rounded-full object-cover"
+                src="https://i.pinimg.com/736x/63/5f/da/635fda0fbf515620c941c24ebb22ad4f.jpg"
+                alt=""
+              />
             </div>
           </div>
-          <div className="max-w-sm p-1 bg-gray-100  border-gray-200 rounded-3xl shadow dark:bg-gray-800 dark:border-gray-700">
-            <div className="max-w-sm p-6 bg-white  border-gray-200 rounded-3xl ">
-              <div className="flex items-center">
-                <svg
-                  className="w-4 h-4 text-blue-500 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-blue-500 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-blue-500 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-blue-500 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <svg
-                  className="w-4 h-4 text-blue-500 ms-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-                <br />
-                <br />
-              </div>
-
-              <span>
-                "I Just Returned From The Most Amazing Trip To Europe, All
-                Thanks To This Travel Agency! From The Moment I Contacted Them,
-                They Were Incredibly Helpful And Made Sure To Create An
-                Itinerary That Suited My Interests And Budget. I Can't Wait To
-                Book My Next Adventure With Them!"
-              </span>
-            </div>
-            <div className="flex items-center">
-              <div className="ml-6 pt-2 flex-shrink-0">
-                <img
-                  className="w-12 h-12 rounded-full object-cover mr-4"
-                  src="https://images.unsplash.com/photo-1595347097560-69238724e7bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG1hbnxlbnwwfHwwfHx8MA%3D%3D"
-                  alt=""
-                />
-              </div>
-              <div>
-                <h1 className="font-bold">Arefin Shuvo</h1>
-                <span className="text-sm text-gray-500">Product Designer</span>
-              </div>
-            </div>
-          </div>
+          <div></div>
+          <br />
         </div>
-        <br />
-
-        <div className="flex justify-center space-x-5 mt-20"></div>
-        <br />
-        <div className="grid grid-cols-5 gap-4">
-          <div className="flex flex-col justify-center items-center col-span-1">
-            <img
-              className="w-36 h-36 rounded-full object-cover"
-              src="https://houseoftravelandtours.com/wp-content/uploads/elementor/thumbs/shifaaz-shamoon-qtbV_8P_Ksk-unsplash-q9z45aup4ncx112sk4huiqijlao7lmflwti9nqd1vc.jpg"
-              alt=""
-            />
-          </div>
-
-          <div className="flex flex-col justify-center items-center col-span-1">
-            <span className="font-bold text-2xl">Explore The Skies</span>
-            <h1 className="font-bold text-2xl">With Confidence!</h1>
-          </div>
-          <div className="flex flex-col justify-center items-center col-span-1">
-            <img
-              className="w-28 h-28 rounded-full object-cover"
-              src="https://i.pinimg.com/564x/52/51/8b/52518bc0879daa54380b02a5ff0b78f8.jpg"
-              alt=""
-            />
-          </div>
-          <div className="flex flex-col justify-center items-start">
-            <p className="text-sm text-gray-500">
-              Travelling Is A Wonderful Way To Explore New Places, Learn About
-            </p>
-            <p className="text-sm text-gray-500">
-              Different Cultures, And Gain
-            </p>
-          </div>
-          <div className="flex flex-col justify-center items-center col-span-1">
-            <img
-              className="w-36 h-36 rounded-full object-cover"
-              src="https://i.pinimg.com/736x/63/5f/da/635fda0fbf515620c941c24ebb22ad4f.jpg"
-              alt=""
-            />
-          </div>
-        </div>
-        <div></div>
-        <br />
-
         <Footerld />
       </div>
     </>

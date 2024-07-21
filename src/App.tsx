@@ -15,9 +15,10 @@ import { Provider } from "react-redux";
 import Pokemon from "./page/Pokemon";
 import PokemonDetail from "./page/PokemonDetail";
 import Redux from "./page/Redux";
+import Navbar from "./components/home/Navbar";
 const MainLayout = () => (
   <>
-    <Nav />
+    <Navbar />
     <Outlet />
   </>
 );

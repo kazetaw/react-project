@@ -19,7 +19,7 @@ function Banner() {
   return (
     <>
       {" "}
-      <section id="hero" className="relative overflow-hidden">
+      <section id="home" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-opacity-50">
           <img
             src="/src/image/bg-light.webp"
@@ -133,7 +133,7 @@ function Banner() {
             </motion.div>
           </div>
           <img
-            src="assets/img/hero-services-img.webp"
+            src="assets/img/home-services-img.webp"
             alt=""
             className="mt-8 max-w-full h-auto"
             data-aos="zoom-out"
