@@ -95,9 +95,7 @@ export const Contact = () => {
               }}
             >
               <h3 className="text-xl font-bold mb-2">Address</h3>
-              <p className="text-gray-600">
-                A108 Adam Street, New York, NY 535022
-              </p>
+              <p className="text-gray-600">61 M. 7 Bannondang Sisaket 33120</p>
             </motion.div>
 
             <motion.div className="w-full md:w-1/3 lg:w-1/6 bg-white shadow-lg p-6 rounded flex flex-col items-center">

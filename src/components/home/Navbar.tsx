@@ -2,8 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { useNavigate } from "react-router-dom";
-import Button3D from "./ui-components/Button3D";
-
+import logo from "../../../public/icon/blackicon.png";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -35,22 +34,21 @@ const Navbar = () => {
           onClick={handleLogoClick}
           className="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer"
         >
-          <img
-            src="/src/assets/icon/blackicon.png"
-            className="h-8"
-            alt="Flowbite Logo"
-          />
+          <img src={logo} className="h-8" alt="Flowbite Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             UikazE
           </span>
         </div>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <button
-            type="button"
-            className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-          >
-            Get started
-          </button>
+          <a href="#contact">
+            <button
+              type="button"
+              className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+            >
+              Contact
+            </button>
+          </a>
+
           <button
             onClick={toggleMenu}
             type="button"
@@ -85,9 +83,9 @@ const Navbar = () => {
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             {[
               { name: "Home", section: "home" },
+              { name: "About Me", section: "aboutme" },
               { name: "Skill", section: "skill" },
               { name: "Project", section: "project" },
-              { name: "Contact", section: "contact" },
             ].map(({ name, section }) => (
               <li key={section}>
                 <ScrollLink

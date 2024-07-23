@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { GrFormPreviousLink } from "react-icons/gr";
 import { FaRegHeart } from "react-icons/fa";

@@ -1,4 +1,9 @@
 import Footerld from "../components/footerld";
+import BannerPlane from "../../public/image/plane.png";
+import Airbnb from "../../public/image/Airbnb.png";
+import Booking from "../../public/image/Booking.png";
+import Trivago from "../../public/image/Trivago.png";
+import Expredia from "../../public/image/Expedia.png";
 // import styles from "./styles/Landingpage.module.scss";
 export const Landingpage = () => {
   return (
@@ -103,7 +108,7 @@ export const Landingpage = () => {
         <div className="relative">
           <img
             className="w-full h-full object-cover rounded-3xl"
-            src="src/image/plane.png"
+            src={BannerPlane}
             alt="Plane"
           />
 
@@ -193,14 +198,10 @@ export const Landingpage = () => {
             </button>
           </div>
           <div className="flex items-center space-x-4">
-            <img src="src/image/Airbnb.png" alt="Airbnb" className="h-14" />
-            <img
-              src="src/image/Booking.png"
-              alt="Booking.com"
-              className="h-16"
-            />
-            <img src="src/image/Trivago.png" alt="Trivago" className="h-16" />
-            <img src="src/image/Expedia.png" alt="Expedia" className="h-16" />
+            <img src={Airbnb} alt="Airbnb" className="h-14" />
+            <img src={Booking} alt="Booking.com" className="h-16" />
+            <img src={Trivago} alt="Trivago" className="h-16" />
+            <img src={Expredia} alt="Expedia" className="h-16" />
           </div>
         </div>
         <div>

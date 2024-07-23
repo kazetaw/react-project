@@ -25,11 +25,7 @@ const Nav = () => {
     >
       <div className="container mx-auto flex items-center justify-between p-4">
         <a href="index.html" className="flex items-center space-x-2 font-noto">
-          <img
-            src="\src\assets\icon\blackicon.png"
-            alt="Logo"
-            className="h-8"
-          />
+          <img src="\assets\icon\blackicon.png" alt="Logo" className="h-8" />
           <h1 className="text-xl font-bold font-noto">UikazE</h1>
         </a>
 

@@ -2,7 +2,6 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import Todo from "./page/Todo";
 import Home from "./page/Home";
-import Nav from "./components/Nav";
 import CheckList from "./page/CheckList";
 import { Landingpage } from "./page/Landingpage";
 import "./index.css";

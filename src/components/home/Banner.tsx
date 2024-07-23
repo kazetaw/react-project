@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Bannerimg from "../../../public/image/bg-light.png";
 // import React from "react";
 const svgVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -22,7 +23,7 @@ function Banner() {
       <section id="home" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-opacity-50">
           <img
-            src="/src/image/bg-light.webp"
+            src={Bannerimg}
             alt=""
             className="object-cover w-full h-full opacity-100"
           />
@@ -122,14 +123,13 @@ function Banner() {
               transition={{ duration: 0.5 }}
               className="text-4xl font-bold"
             >
-              {" "}
-              <button
+              {/* <button
                 type="button"
                 className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
                 style={{ cursor: "pointer !important" }}
               >
                 Learn more
-              </button>
+              </button> */}
             </motion.div>
           </div>
           <img

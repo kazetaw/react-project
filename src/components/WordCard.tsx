@@ -55,7 +55,7 @@ const WordCard: React.FC<WordCardProps> = ({
     <IconButton
       size="small"
       sx={{ position: "absolute", top: 5, right: 5, zIndex: 1 }}
-      onClick={(e) => {
+      onClick={(e: { stopPropagation: () => void }) => {
         e.stopPropagation();
         onToggleLock(word);
       }}

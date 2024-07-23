@@ -1,5 +1,3 @@
-// import React from "react";
-
 const PokemonFailedSkeleton = () => {
   return (
     <div className="container mx-auto animate-pulse">

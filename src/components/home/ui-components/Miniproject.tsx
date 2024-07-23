@@ -1,6 +1,10 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import miniprotodo from "../../../../public/image/todos.png";
+import miniproword from "../../../../public/image/word.png";
+import miniprocard from "../../../../public/image/card.png";
+import miniproshop from "../../../../public/image/cart.png";
 
 // Define the type for ServiceItem props
 interface ServiceItemProps {
@@ -17,7 +21,7 @@ const serviceItems = [
     delay: 0.1,
     bgColor: "bg-cyan-500",
     link: "/todo",
-    image: "/src/image/todos.png",
+    image: miniprotodo,
   },
   {
     icon: "bi bi-broadcast",
@@ -25,7 +29,7 @@ const serviceItems = [
     delay: 0.2,
     bgColor: "bg-orange-500",
     link: "/word",
-    image: "/src/image/word.png",
+    image: miniproword,
   },
   {
     icon: "bi bi-easel",
@@ -33,7 +37,7 @@ const serviceItems = [
     delay: 0.3,
     bgColor: "bg-teal-500",
     link: "/card",
-    image: "/src/image/card.png",
+    image: miniprocard,
   },
   {
     icon: "bi bi-bounding-box-circles",
@@ -41,7 +45,7 @@ const serviceItems = [
     delay: 0.4,
     bgColor: "bg-red-500",
     link: "/shopping_cart",
-    image: "/src/image/cart.png",
+    image: miniproshop,
   },
 ];
 
@@ -54,7 +58,7 @@ function Miniproject() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
         </span>
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-2 gap-5 mt-5 ">
+      <div className="grid grid-cols-2 lg:grid-cols-2 gap-5 mt-5">
         {serviceItems.map((item, index) => (
           <ServiceItem
             key={index}
@@ -83,7 +87,7 @@ function ServiceItem({ link, image, title, delay }: ServiceItemProps) {
         scale: 1.05,
         boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.15)",
       }}
-      className={`service-item relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 h-40 md:h-96`}
+      className="service-item relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 h-40 md:h-96"
     >
       <Link to={link} className="block relative w-full h-full">
         <img

@@ -20,7 +20,7 @@ interface CartProps {
   removeItem: (productId: string) => void;
 }
 
-const Cart: React.FC<CartProps> = ({ cart, addItem, removeItem }) => {
+const Cart: React.FC<CartProps> = ({ cart, removeItem }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalItems, setTotalItems] = useState(0);
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -48,11 +48,6 @@ const Cart: React.FC<CartProps> = ({ cart, addItem, removeItem }) => {
 
   const handleDialogClose = () => {
     setDialogOpen(false);
-  };
-
-  const handleAddItem = (productId: string) => {
-    addItem(productId);
-    updateCartDetails();
   };
 
   return (

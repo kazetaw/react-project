@@ -5,7 +5,7 @@ import {
   FaLinkedinIn,
   FaGithub,
 } from "react-icons/fa";
-
+import Logo from "../../../../public/icon/blackicon.png";
 function Footer() {
   return (
     <footer className="bg-gray-100 dark:bg-gray-800">
@@ -15,20 +15,16 @@ function Footer() {
             href="#"
             className="flex items-center space-x-3 rtl:space-x-reverse mb-4"
           >
-            <img
-              src="/src/assets/icon/blackicon.png"
-              className="h-8"
-              alt="Flowbite Logo"
-            />
+            <img src={Logo} className="h-8" alt="Flowbite Logo" />
             <span className="text-2xl font-semibold whitespace-nowrap dark:text-white">
               UikazE
             </span>
           </a>
           <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-            Phone: +1 5589 55488 55
+            Phone: 092 536 2493
           </div>
           <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-            Email: info@example.com
+            Email: thanchira.m@kkumail.com
           </div>
           <div className="flex space-x-4 mt-4">
             <a
@@ -151,7 +147,7 @@ function Footer() {
 
       <div className="bg-gray-200 dark:bg-gray-700 border-t border-gray-300 dark:border-gray-600 py-4 text-center">
         <p className="text-sm text-gray-600 dark:text-gray-300">
-          &copy; 2023 UiXSHUVO All Rights Reserved
+          &copy; 2023 UiKazE All Rights Reserved
         </p>
       </div>
     </footer>

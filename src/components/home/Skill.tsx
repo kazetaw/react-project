@@ -44,13 +44,44 @@ function Skill() {
       </div>
       <div className="container mx-auto px-4 bg-gray-100">
         <div className="flex justify-center gap-4 mt-4">
-          <SkillIcon icon={FaHtml5} color="text-orange-600" label="HTML" />
-          <SkillIcon icon={FaCss3Alt} color="text-blue-600" label="CSS" />
-          <SkillIcon icon={FaJs} color="text-yellow-600" label="JavaScript" />
-          <SkillIcon icon={FaReact} color="text-blue-400" label="React" />
-          <SkillIcon icon={SiRedux} color="text-purple-600" label="Redux" />
-          <SkillIcon icon={FaSass} color="text-pink-600" label="Sass" />
           <SkillIcon
+            className="hover:text-orange-600"
+            icon={FaHtml5}
+            color="text-orange-600"
+            label="HTML"
+          />
+          <SkillIcon
+            className="hover:text-blue-600"
+            icon={FaCss3Alt}
+            color="text-blue-600"
+            label="CSS"
+          />
+          <SkillIcon
+            className="hover:text-yellow-600"
+            icon={FaJs}
+            color="text-yellow-600"
+            label="JavaScript"
+          />
+          <SkillIcon
+            className="hover:text-blue-400"
+            icon={FaReact}
+            color="text-blue-400"
+            label="React"
+          />
+          <SkillIcon
+            className="hover:text-purple-600"
+            icon={SiRedux}
+            color="text-purple-600"
+            label="Redux"
+          />
+          <SkillIcon
+            className="hover:text-pink-600"
+            icon={FaSass}
+            color="text-pink-600"
+            label="Sass"
+          />
+          <SkillIcon
+            className="hover:text-teal-400"
             icon={RiTailwindCssFill}
             color="text-teal-400"
             label="Tailwind CSS"

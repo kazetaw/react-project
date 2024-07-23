@@ -1,7 +1,9 @@
 import { motion, useInView, Transition } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-
+import pokemonimg from "../../../public/image/pokemon.png";
+import signimg from "../../../public/image/sign.png";
+import landimg from "../../../public/image/land.png";
 // Define the type for transition
 interface AnimatedSectionProps {
   refProp: React.RefObject<HTMLDivElement>;
@@ -57,7 +59,7 @@ function Project() {
           >
             <Link to="pokemon">
               <motion.img
-                src="\src\image\pokemon.png"
+                src={pokemonimg}
                 className="img-fluid rounded-lg w-full shadow-2xl"
                 alt=""
                 whileHover={{
@@ -131,7 +133,7 @@ function Project() {
           >
             <Link to={"antd"}>
               <motion.img
-                src="/src/image/sign.png"
+                src={signimg}
                 className="img-fluid rounded-lg w-full shadow-2xl"
                 alt=""
                 whileHover={{
@@ -155,7 +157,7 @@ function Project() {
           >
             <Link to={"landingpage"}>
               <motion.img
-                src="\src\image\land.png"
+                src={landimg}
                 className="img-fluid rounded-lg w-full shadow-2xl"
                 alt=""
                 whileHover={{
