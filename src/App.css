@@ -21,6 +21,37 @@ body {
     padding: 10px;
     text-align: center;
   }
+
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
+  *,
+  body,
+  html {
+    &::-webkit-scrollbar {
+      background-color: #f1f5f9;
+      height: 20px;
+      width: 20px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: #f1f5f9;
+      border-radius: 99em;
+      border: 6px solid #f1f5f9;
+    }
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
